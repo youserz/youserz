@@ -16,8 +16,7 @@
 
 ## 🚀 Projetos em Destaque
 - [PB_Compass-DandA-AWS](https://github.com/youserz/PB_Compass-DandA-AWS) → Pipeline de ingestão e processamento de dados do TMDB usando AWS (Lambda, Glue, S3, Athena).  
-
----
+- [projetoCompiladores](https://github.com/youserz/projetoCompiladores) → Implementação de um compilador didático para um mini C como Trabalho Prático da disciplina Compiladores (GCC130 - UFLA)
 
 ## 🛠️ Tecnologias
 ### Linguagens
