@@ -1,6 +1,6 @@
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=00bfbf&height=120&section=header"/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=a7198a&height=120&section=header"/>
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=00bfbf&size=30&center=true&vCenter=true&width=1000&lines=Olá,+eu+sou+o+Bernado+Diniz+👋;Engenheiro+de+Dados;AWS+|+Azure+|+Databricks+|+Big+Data)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=a7198a&size=30&center=true&vCenter=true&width=1000&lines=Olá,+eu+sou+o+Bernado+Diniz+👋;Engenheiro+de+Dados;AWS+|+Azure+|+Databricks+|+Big+Data)](https://git.io/typing-svg)
 
 ---
 
@@ -110,4 +110,4 @@ Compilador completo abrangendo análise léxica, sintática (Parser) e semântic
   <img src="https://raw.githubusercontent.com/youserz/youserz/output/snake.svg" alt="Snake animation" />
 </div>
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=00bfbf&height=120&section=footer"/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=a7198a&height=120&section=footer"/>
