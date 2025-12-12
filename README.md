@@ -4,18 +4,18 @@
 
 ---
 
-## 👨‍💻 Sobre Mim
+## Sobre Mim
 
 Estudante de Ciência da Computação (6º período) na UFLA com forte atuação em **Engenharia de Dados** e **Cloud Computing**. Experiência prática em ambientes AWS e Azure Databricks, desenvolvendo pipelines de Big Data, ingestão incremental e otimização de datalakes.
 
-🔭 Atualmente focado na modernização de arquiteturas de dados climáticos utilizando **Delta Lake**, **Zarr (Icechunk)** e **Apache Spark**  
-🌱 Aprendendo continuamente sobre governança de dados e automação de ETL  
-🎯 Busco desafios técnicos para aplicar conhecimentos em escalabilidade e processamento distribuído  
-📫 Contato: **bernado.felix@estudante.ufla.br**
+- Atualmente focado na modernização de arquiteturas de dados climáticos utilizando **Delta Lake**, **Zarr (Icechunk)** e **Apache Spark**  
+- Aprendendo continuamente sobre governança de dados e automação de ETL  
+- Busco desafios técnicos para aplicar conhecimentos em escalabilidade e processamento distribuído  
+- Contato: **bernado.felix@estudante.ufla.br**
 
 ---
 
-## 💼 Experiência Profissional
+## Experiência Profissional
 
 ### 🔹 Engenheiro de Dados (Bolsista) | Zetta/UFLA
 **Ago/2025 – Atual**
@@ -35,7 +35,7 @@ Estudante de Ciência da Computação (6º período) na UFLA com forte atuação
 
 ---
 
-## 🚀 Projetos em Destaque
+## Projetos em Destaque
 
 ### [PB_Compass-DandA-AWS](https://github.com/youserz/PB_Compass-DandA-AWS)
 Pipeline completo de Engenharia de Dados na AWS: Ingestão de datasets públicos do TMDB, tratamento com **Docker** e **Spark**, e disponibilização para Business Intelligence.
@@ -49,7 +49,7 @@ Compilador completo abrangendo análise léxica, sintática (Parser) e semântic
 
 ---
 
-## 🛠️ Stack Tecnológica
+## Stack Tecnológica
 
 ### Cloud Computing
 ![AWS](https://img.shields.io/badge/Amazon%20AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
@@ -79,7 +79,7 @@ Compilador completo abrangendo análise léxica, sintática (Parser) e semântic
 
 ---
 
-## 📜 Certificações
+## Certificações
 
 ✅ **AWS Certified Cloud Practitioner (CLF-C02)** - 2025  
 ✅ **AWS Partner: Cloud Economics & Technical Accredited** - 2025  
@@ -87,7 +87,7 @@ Compilador completo abrangendo análise léxica, sintática (Parser) e semântic
 
 ---
 
-## 📫 Contato
+## Contato
 
 <div align="center">
   <a href="https://www.linkedin.com/in/bernadodiniz/" target="_blank">
