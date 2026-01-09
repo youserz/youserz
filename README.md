@@ -47,6 +47,12 @@ Compilador completo abrangendo análise léxica, sintática (Parser) e semântic
 - **Tecnologias:** C++, Teoria da Computação
 - **Disciplina:** Compiladores (GCC130 - UFLA)
 
+### [voice-chatgpt](https://github.com/youserz/voice-chatgpt)
+Assistente conversacional por voz que integra **Speech-to-Text (OpenAI Audio API)** + **Chat (OpenAI Responses API)** + **Text-to-Speech (gTTS/OpenAI)**. O usuário fala, o áudio é transcrito, a pergunta é processada pelo modelo e a resposta é devolvida em **texto e áudio**.
+
+- **Fluxo:** Voz → Texto → Resposta (LLM) → Áudio  
+- **Features:** suporte multi-idiomas, fallback de TTS, configuração via variáveis de ambiente  
+- **Stack:** Python, OpenAI SDK, gTTS (opcional OpenAI TTS)
 ---
 
 ## Stack Tecnológica
