@@ -13,27 +13,27 @@
   <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.0s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="15 0" to="0 0" dur="0.5s" begin="0.0s" fill="freeze"/>
     <rect x="95" y="55" width="720" height="95" rx="8" ry="8" fill="#111d2e" stroke="#00c8a0" stroke-width="0.8" opacity="0.85"/>
     <rect x="96" y="56" width="718" height="93" rx="7" ry="7" fill="#0b1120" opacity="0.4"/>
-    <text x="109" y="77" fill="#00c8a0" font-size="13" font-weight="bold" font-family="monospace">Engenheiro de Dados Jr</text>
-    <text x="109" y="95" fill="#8da9c4" font-size="10" font-family="monospace">Zetta/UFLA - Lavras, MG  |  Ago/2025 - Atual</text>
+    <text x="109" y="77" fill="#00c8a0" font-size="13" font-weight="bold" font-family="monospace">Data Engineer Jr</text>
+    <text x="109" y="95" fill="#8da9c4" font-size="10" font-family="monospace">Zetta/UFLA - Lavras, MG  |  Aug/2025 - Present</text>
     <circle cx="113" cy="110" r="1.5" fill="#00c8a0" opacity="0.6"/>
-    <text x="121" y="113" fill="#8da9c4" font-size="9" font-family="sans-serif">Pipeline ETL incremental no Azure Databricks (NASA GPM/IMERG)</text>
+    <text x="121" y="113" fill="#8da9c4" font-size="9" font-family="sans-serif">Incremental ETL pipeline on Azure Databricks (NASA GPM/IMERG)</text>
     <circle cx="113" cy="126" r="1.5" fill="#00c8a0" opacity="0.6"/>
-    <text x="121" y="129" fill="#8da9c4" font-size="9" font-family="sans-serif">Arquitetura inédita Icechunk/Zarr + Delta Lake + Unity Catalog</text>
+    <text x="121" y="129" fill="#8da9c4" font-size="9" font-family="sans-serif">Novel architecture: Icechunk/Zarr + Delta Lake + Unity Catalog</text>
     <circle cx="113" cy="142" r="1.5" fill="#00c8a0" opacity="0.6"/>
-    <text x="121" y="145" fill="#8da9c4" font-size="9" font-family="sans-serif">Otimização de tipagem e particionamento geoespacial</text>
+    <text x="121" y="145" fill="#8da9c4" font-size="9" font-family="sans-serif">Type conversion and geospatial partitioning optimization</text>
     <rect x="95" y="55" width="720" height="1.5" fill="#00c8a0" opacity="0.12"><animateTransform attributeName="transform" type="translate" from="0 0" to="0 95" dur="4s" begin="0.4s" repeatCount="indefinite"/></rect>
   </g>
   <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.35s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="15 0" to="0 0" dur="0.5s" begin="0.35s" fill="freeze"/>
     <rect x="95" y="175" width="720" height="95" rx="8" ry="8" fill="#111d2e" stroke="#ff6b35" stroke-width="0.8" opacity="0.85"/>
     <rect x="96" y="176" width="718" height="93" rx="7" ry="7" fill="#0b1120" opacity="0.4"/>
-    <text x="109" y="197" fill="#ff6b35" font-size="13" font-weight="bold" font-family="monospace">Estagiário de Engenharia de Dados</text>
-    <text x="109" y="215" fill="#8da9c4" font-size="10" font-family="monospace">Compass UOL - Remoto  |  Fev/2025 - Ago/2025</text>
+    <text x="109" y="197" fill="#ff6b35" font-size="13" font-weight="bold" font-family="monospace">Data Engineering Intern</text>
+    <text x="109" y="215" fill="#8da9c4" font-size="10" font-family="monospace">Compass UOL - Remote  |  Feb/2025 - Aug/2025</text>
     <circle cx="113" cy="230" r="1.5" fill="#ff6b35" opacity="0.6"/>
-    <text x="121" y="233" fill="#8da9c4" font-size="9" font-family="sans-serif">Data Lake em camadas AWS S3 (Raw -&gt; Trusted -&gt; Refined)</text>
+    <text x="121" y="233" fill="#8da9c4" font-size="9" font-family="sans-serif">Layered Data Lake on AWS S3 (Raw -&gt; Trusted -&gt; Refined)</text>
     <circle cx="113" cy="246" r="1.5" fill="#ff6b35" opacity="0.6"/>
-    <text x="121" y="249" fill="#8da9c4" font-size="9" font-family="sans-serif">Glue Jobs (PySpark) + AWS Glue Crawler para automação</text>
+    <text x="121" y="249" fill="#8da9c4" font-size="9" font-family="sans-serif">Glue Jobs (PySpark) + AWS Glue Crawler for automation</text>
     <circle cx="113" cy="262" r="1.5" fill="#ff6b35" opacity="0.6"/>
-    <text x="121" y="265" fill="#8da9c4" font-size="9" font-family="sans-serif">Consultas serverless com Athena e otimização do Redshift</text>
+    <text x="121" y="265" fill="#8da9c4" font-size="9" font-family="sans-serif">Serverless queries with Athena and Redshift optimization</text>
     <rect x="95" y="175" width="720" height="1.5" fill="#ff6b35" opacity="0.12"><animateTransform attributeName="transform" type="translate" from="0 0" to="0 95" dur="4s" begin="0.75s" repeatCount="indefinite"/></rect>
   </g>
 
