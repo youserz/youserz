@@ -1,0 +1,6 @@
+config.yml
+assets/generated/*.svg
+__pycache__/
+*.pyc
+.venv/
+.env

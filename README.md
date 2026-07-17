@@ -1,119 +1,190 @@
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=a7198a&height=120&section=header"/>
+# datastack-profile
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=a7198a&size=30&center=true&vCenter=true&width=1000&lines=Olá,+eu+sou+o+Bernado+Diniz+👋;Engenheiro+de+Dados;AWS+|+Azure+|+Databricks+|+Big+Data)](https://git.io/typing-svg)
+![License](https://img.shields.io/badge/license-GPL--3.0-blue.svg)
+![Python](https://img.shields.io/badge/python-3.9+-brightgreen.svg)
 
----
+A dynamic GitHub profile README generator with a **Data Lake / Pipeline** theme. Your GitHub stats, tech stack, and featured projects are rendered as an animated data infrastructure visualization.
 
-## Sobre Mim
-
-Estudante de Ciência da Computação (6º período) na UFLA com forte atuação em **Engenharia de Dados** e **Cloud Computing**. Experiência prática em ambientes AWS e Azure Databricks, desenvolvendo pipelines de Big Data, ingestão incremental e otimização de datalakes.
-
-- Atualmente focado na modernização de arquiteturas de dados climáticos utilizando **Delta Lake**, **Zarr (Icechunk)** e **Apache Spark**  
-- Aprendendo continuamente sobre governança de dados e automação de ETL  
-- Busco desafios técnicos para aplicar conhecimentos em escalabilidade e processamento distribuído  
-- Contato: **bernado.felix@estudante.ufla.br**
-
----
-
-## Experiência Profissional
-
-### 🔹 Engenheiro de Dados (Bolsista) | Zetta/UFLA
-**Ago/2025 – Atual**
-- Desenvolvimento de pipeline ETL incremental de alta performance no **Azure Databricks** para ingestão de dados globais de precipitação (NASA GPM/IMERG)
-- Implementação de arquitetura inovadora utilizando **Icechunk** e **Zarr** para armazenamento transacional
-- Integração com **Unity Catalog** e **Delta Lake** para governança de dados
-- Otimização de custos através de conversão de tipagem e particionamento eficiente de dados geoespaciais
-- Automação de fluxos com **Python**, **Xarray** e orquestração via **Databricks Jobs**
-
-### 🔹 Estagiário de Engenharia de Dados | Compass UOL
-**Fev/2025 – Ago/2025**
-- Construção e manutenção de **Data Lakes** na AWS (S3, camadas Raw/Trusted/Refined)
-- Desenvolvimento de **Glue Jobs (PySpark)** para transformação de dados
-- Catalogação automatizada via **AWS Glue Crawler**
-- Consultas analíticas com **Amazon Athena** e **Redshift**
-- Aplicação de práticas de segurança e governança em Cloud
-
----
-
-## Projetos em Destaque
-
-### [PB_Compass-DandA-AWS](https://github.com/youserz/PB_Compass-DandA-AWS)
-Pipeline completo de Engenharia de Dados na AWS: Ingestão de datasets públicos do TMDB, tratamento com **Docker** e **Spark**, e disponibilização para Business Intelligence.
-- **Stack:** AWS (Lambda, Glue, S3, Athena), PySpark, Docker
-- **Arquitetura:** Data Lake com camadas Raw/Trusted/Refined
-
-### [projetoCompiladores](https://github.com/youserz/projetoCompiladores)
-Compilador completo abrangendo análise léxica, sintática (Parser) e semântica. Implementação de tabelas de símbolos e autômatos finitos.
-- **Tecnologias:** C++, Teoria da Computação
-- **Disciplina:** Compiladores (GCC130 - UFLA)
-
-### [voice-chatgpt](https://github.com/youserz/voice-chatgpt)
-Assistente conversacional por voz que integra **Speech-to-Text (OpenAI Audio API)** + **Chat (OpenAI Responses API)** + **Text-to-Speech (gTTS/OpenAI)**. O usuário fala, o áudio é transcrito, a pergunta é processada pelo modelo e a resposta é devolvida em **texto e áudio**.
-
-- **Fluxo:** Voz → Texto → Resposta (LLM) → Áudio  
-- **Features:** suporte multi-idiomas, fallback de TTS, configuração via variáveis de ambiente  
-- **Stack:** Python, OpenAI SDK, gTTS (opcional OpenAI TTS)
----
-
-## Stack Tecnológica
-
-### Cloud Computing
-![AWS](https://img.shields.io/badge/Amazon%20AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
-![Azure](https://img.shields.io/badge/Microsoft%20Azure-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white)
-![S3](https://img.shields.io/badge/Amazon%20S3-569A31?style=for-the-badge&logo=amazon-s3&logoColor=white)
-![AWS Glue](https://img.shields.io/badge/AWS%20Glue-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white)
-![AWS Lambda](https://img.shields.io/badge/AWS%20Lambda-FF9900?style=for-the-badge&logo=aws-lambda&logoColor=white)
-![Athena](https://img.shields.io/badge/Amazon%20Athena-444444?style=for-the-badge&logo=amazon-aws&logoColor=white)
-![Redshift](https://img.shields.io/badge/Amazon%20Redshift-8C4FFF?style=for-the-badge&logo=amazon-redshift&logoColor=white)
-
-### Plataformas de Dados
-![Databricks](https://img.shields.io/badge/Databricks-FF3621?style=for-the-badge&logo=databricks&logoColor=white)
-![Delta Lake](https://img.shields.io/badge/Delta%20Lake-003366?style=for-the-badge&logo=delta&logoColor=white)
-![Apache Spark](https://img.shields.io/badge/Apache%20Spark-E25A16?style=for-the-badge&logo=apache-spark&logoColor=white)
-
-### Linguagens & Ferramentas
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-
-### Big Data & Processamento
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![Xarray](https://img.shields.io/badge/Xarray-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Zarr](https://img.shields.io/badge/Zarr-000000?style=for-the-badge&logo=zarr&logoColor=white)
-
----
-
-## Certificações
-
-✅ **AWS Certified Cloud Practitioner (CLF-C02)** - 2025  
-✅ **AWS Partner: Cloud Economics & Technical Accredited** - 2025  
-✅ **AWS Partner: Sales Accredited** - 2025  
-
----
-
-## Contato
+## Preview
 
 <div align="center">
-  <a href="https://www.linkedin.com/in/bernadodiniz/" target="_blank">
-    <img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white">
-  </a> 
-  <a href="https://github.com/youserz" target="_blank">
-    <img src="https://img.shields.io/badge/-GitHub-181717?style=for-the-badge&logo=github&logoColor=white">
-  </a>
-  <a href="mailto:bernado.felix@estudante.ufla.br" target="_blank">
-    <img src="https://img.shields.io/badge/-Email-D14836?style=for-the-badge&logo=gmail&logoColor=white">
-  </a>
-  <a href="https://www.instagram.com/eobdiniz/" target="_blank">
-    <img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white">
-  </a>
+  <img src="./assets/generated/dataflow-header.svg" width="850" alt="Data Flow Header"/>
 </div>
 
-<br>
+<br/>
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/youserz/youserz/output/snake.svg" alt="Snake animation" />
+  <img src="./assets/generated/stats-card.svg" width="850" alt="Data Telemetry"/>
 </div>
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=a7198a&height=120&section=footer"/>
+<br/>
+
+<div align="center">
+  <img src="./assets/generated/tech-stack.svg" width="850" alt="Data Stack Layers"/>
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="./assets/generated/projects-pipeline.svg" width="850" alt="Featured Pipelines"/>
+</div>
+
+## Features
+
+- **DataFlow Header** — animated data particles flowing through pipeline tubes, with a terminal cursor effect on your name and tagline
+- **Data Telemetry** — real-time GitHub stats rendered as vertical gauge bars with animated fills
+- **Data Stack Layers** — your tech stack visualized as **isometric 3D blocks** stacked vertically, each layer containing its technologies with pulsing badges
+- **Featured Pipelines** — project cards connected by animated data pipes with flowing particles and node indicators
+- **Fully Configurable** — colors, layers, projects, and displayed metrics are all controlled via `config.yml`
+- **Auto-Updates** — GitHub Actions regenerates SVGs every 12 hours or on config changes
+
+## Quick Start
+
+1. **Fork this repo** (or use "Use this template") and rename it to your GitHub username.
+2. Copy the example config:
+   ```bash
+   cp config.example.yml config.yml
+   ```
+3. Edit `config.yml` with your details (username, name, tagline, data layers, projects, etc.)
+4. Replace `README.md` with the contents of [`README.profile.md`](README.profile.md) and customize the social links.
+5. Push — the GitHub Action will generate and commit the SVGs automatically.
+
+> **Important:** This repo ships with `--demo` mode enabled in the GitHub Action so it works out-of-the-box with sample data. After creating your `config.yml` in step 3, edit `.github/workflows/generate-profile.yml` and change the generate step from:
+> ```yaml
+> run: python -m generator.main --demo
+> ```
+> to:
+> ```yaml
+> run: python -m generator.main
+> ```
+> This switches from demo data to your real GitHub stats.
+
+> **Note:** The first run may need a manual trigger. Go to Actions > "Generate Profile SVGs" > "Run workflow".
+
+## Configuration Reference
+
+All configuration lives in `config.yml`. See [`config.example.yml`](config.example.yml) for a fully commented template.
+
+| Section | Description |
+|---------|-------------|
+| `username` | Your GitHub username (required) |
+| `profile` | Name, tagline, company, location, bio, philosophy |
+| `social` | Email, LinkedIn handle, website URL |
+| `data_layers` | 3 focus areas — each with a name, color (`pipeline_teal`, `spark_orange`, `lake_green`), and tech items |
+| `projects` | Featured repos — each with `repo`, `layer` index (0-2), and `description` |
+| `theme` | 9 hex color overrides for the data lake palette |
+| `stats.metrics` | Which metrics to show: `commits`, `stars`, `prs`, `issues`, `repos` |
+| `languages` | Languages to `exclude` and `max_display` count |
+
+## Local Development
+
+### Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/YOUR_USERNAME/datastack-profile.git
+cd datastack-profile
+
+# Create and activate a virtual environment
+python3 -m venv .venv
+source .venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Copy the example config and customize it
+cp config.example.yml config.yml
+```
+
+### Generating SVGs
+
+**Demo mode** — no API calls, uses sample data from `config.example.yml`:
+
+```bash
+python -m generator.main --demo
+```
+
+**Without a token** — fetches public data only (commit data will be limited):
+
+```bash
+python -m generator.main
+```
+
+**With a token** — complete data including private contributions:
+
+```bash
+GITHUB_TOKEN=ghp_your_token_here python -m generator.main
+```
+
+The 4 SVGs are written to `assets/generated/`.
+
+### Viewing SVGs
+
+Open any SVG directly in a browser:
+
+```bash
+open assets/generated/dataflow-header.svg
+```
+
+Or start a local server to view them all at once:
+
+```bash
+python3 -m http.server 8080
+# Visit http://localhost:8080 and navigate to assets/generated/
+```
+
+### Running Tests
+
+```bash
+pip install -r requirements-dev.txt
+pytest -v
+```
+
+Tests cover config validation, utility functions, and SVG generation. No network access or tokens required.
+
+## How the GitHub Action Works
+
+The workflow (`.github/workflows/generate-profile.yml`) runs automatically:
+
+- **Every 12 hours** (cron schedule)
+- **On push** when `config.yml` or `generator/**` files change
+- **Manually** via the Actions tab (workflow_dispatch)
+
+It generates the SVGs and commits them with the message `chore: update datastack SVGs [skip ci]`.
+
+## Troubleshooting
+
+- **"Could not fetch stats"** — Invalid or expired token. Check the token or run without one to use the REST fallback.
+- **SVG with XML error in browser** — Verify that `config.yml` is well-formatted YAML. Special characters (`&`, `<`, `>`) in text fields are escaped automatically, but malformed YAML will break generation.
+- **Languages not showing** — Private repos don't return languages via REST without a token. Use a token with `repo` scope to include them.
+
+## Contributing
+
+Contributions are welcome! Here's how to help:
+
+1. **Bug reports** — open an issue with steps to reproduce and expected vs actual behavior.
+2. **Feature suggestions** — open an issue tagged **enhancement** describing the feature and why it's useful.
+3. **Pull requests:**
+   - Fork the repo and create a branch from `main`
+   - Follow the [Local Development](#local-development) setup above
+   - Make your changes and verify SVGs generate correctly (`python -m generator.main`)
+   - Test your SVGs in a browser to verify animations render
+   - Open a PR against `main` with a clear description
+
+**Code guidelines:** SVG templates live in `generator/templates/` (one file per section). Config schema lives in `generator/config.py`. Don't commit `config.yml` (it's gitignored) — update `config.example.yml` for new config options. Keep PRs focused: one feature or fix per PR.
+
+## Architecture
+
+```
+generator/
+├── main.py                 # Entry point — loads config, fetches data, writes SVGs
+├── config.py               # Config validation and defaults
+├── github_api.py           # GitHub GraphQL + REST client
+├── svg_builder.py          # Orchestrator connecting config, stats, and templates
+├── utils.py                # Colors, math helpers, SVG utilities, isometric helpers
+└── templates/
+    ├── dataflow_header.py           # Pipeline banner with flowing particles (850x280)
+    ├── stats_card.py                # Vertical gauge telemetry (850x180)
+    ├── tech_stack.py                # Isometric stacked data blocks (850xN)
+    └── projects_pipeline.py         # Connected project nodes with data pipes (850x220)
+```

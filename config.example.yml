@@ -1,0 +1,138 @@
+# DataStack Profile README Configuration
+# Copy this file to config.yml and customize it to make it your own!
+
+username: youserz
+
+profile:
+  name: "Bernado Diniz"
+  tagline: "Data Engineer"
+  company: "Zetta/UFLA"
+  location: "Lavras, MG - Brasil"
+  bio: |
+    Computer Science student at UFLA with strong focus on Data Engineering and Cloud Computing. Hands-on experience with AWS and Azure Databricks, building Big Data pipelines, incremental ingestion and data lake optimization.
+  philosophy: "Building scalable Data Lakehouse architectures with Spark, Delta Lake and Cloud Platforms"
+
+social:
+  email: "bernado.felix@estudante.ufla.br"
+  linkedin: "bernadodiniz"
+
+data_layers:
+  - name: "Languages"
+    color: "pipeline_teal"
+    items:
+      - "Python"
+      - "SQL"
+      - "PySpark"
+      - "Java"
+      - "C++"
+
+  - name: "Cloud & Data Platforms"
+    color: "spark_orange"
+    items:
+      - "Azure"
+      - "AWS"
+      - "Databricks"
+
+  - name: "Databases & Modeling"
+    color: "lake_green"
+    items:
+      - "PostgreSQL"
+      - "Delta Lake"
+      - "Data Modeling"
+      - "Star Schema"
+      - "Snowflake Schema"
+      - "SQL Optimization"
+
+  - name: "Big Data & Ecosystem"
+    color: "pipeline_teal"
+    items:
+      - "Apache Spark"
+      - "Xarray"
+      - "Zarr"
+      - "Icechunk"
+      - "Docker"
+      - "Git"
+      - "Azure DevOps"
+      - "Linux"
+
+projects:
+  - repo: "youserz/PB_Compass-DandA-AWS"
+    layer: 0
+    category: "Data Engineering"
+    icon_type: "database"
+    description: "Pipeline AWS para ingestão, processamento distribuído e arquitetura Data Lake"
+
+  - repo: "youserz/voice-chatgpt"
+    layer: 1
+    category: "Artificial Intelligence"
+    icon_type: "ai"
+    description: "Assistente multimodal Speech-to-Text, LLM e Text-to-Speech"
+
+  - repo: "youserz/projetoCompiladores"
+    layer: 2
+    category: "Computer Science"
+    icon_type: "terminal"
+    description: "Compilador com análise léxica, sintática e semântica"
+
+experience:
+  - role: "Engenheiro de Dados Jr"
+    company: "Zetta/UFLA - Lavras, MG"
+    period: "Ago/2025 - Atual"
+    bullets:
+      - "Pipeline ETL incremental no Azure Databricks (NASA GPM/IMERG)"
+      - "Arquitetura inédita Icechunk/Zarr + Delta Lake + Unity Catalog"
+      - "Otimização de tipagem e particionamento geoespacial"
+      - "Automação com Python, Xarray e Databricks Jobs"
+
+  - role: "Estagiário de Engenharia de Dados"
+    company: "Compass UOL - Remoto"
+    period: "Fev/2025 - Ago/2025"
+    bullets:
+      - "Data Lake em camadas AWS S3 (Raw -> Trusted -> Refined)"
+      - "Glue Jobs (PySpark) + AWS Glue Crawler para automação"
+      - "Consultas serverless com Athena e otimização do Redshift"
+      - "Governança com políticas IAM em todo o pipeline"
+
+certifications:
+  - name: "AWS Certified Cloud Practitioner"
+    year: "2025"
+    issuer: "AWS"
+  - name: "Cloud Economics & Technical Accredited"
+    year: "2025"
+    issuer: "AWS Partner"
+  - name: "Sales Accredited"
+    year: "2025"
+    issuer: "AWS Partner"
+  - name: "Cloud Economics Essentials"
+    year: "2025"
+    issuer: "AWS Partner"
+  - name: "GenAI & Dados"
+    year: "2026"
+    issuer: "Fundação Bradesco"
+
+theme:
+  depth: "#0b1120"
+  lake_surface: "#111d2e"
+  grid: "#1e3a5f"
+  pipeline_teal: "#00c8a0"
+  spark_orange: "#ff6b35"
+  lake_green: "#2ecc71"
+  text_bright: "#e6f1ff"
+  text_dim: "#8da9c4"
+  text_faint: "#4a6582"
+
+stats:
+  metrics:
+    - "commits"
+    - "stars"
+    - "prs"
+    - "issues"
+    - "repos"
+
+languages:
+  exclude:
+    - "HTML"
+    - "CSS"
+    - "Shell"
+    - "Makefile"
+  max_display: 8
