@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="255" viewBox="0 0 850 255">
+  <!-- Background -->
+  <rect x="0.5" y="0.5" width="849" height="254" rx="12" ry="12"
+        fill="#0b1120" stroke="#1e3a5f" stroke-width="1"/>
+
+  <!-- Title -->
+  <text x="30" y="38" fill="#4a6582" font-size="11" font-family="monospace" letter-spacing="3">CERTIFICATIONS &amp; ACCREDITATIONS</text>
+
+  <!-- Certification cards -->
+  <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.0s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 12" to="0 0" dur="0.5s" begin="0.0s" fill="freeze"/>
+    <rect x="25.0" y="55" width="250" height="75" rx="8" ry="8" fill="#111d2e" stroke="#00c8a0" stroke-width="0.8" opacity="0.85"/>
+    <rect x="26.0" y="56" width="248" height="73" rx="7" ry="7" fill="#0b1120" opacity="0.4"/>
+    <circle cx="150.0" cy="73" r="10" fill="#00c8a0" opacity="0.12">      <animate attributeName="opacity" values="0.12;0.25;0.12" dur="3s" begin="0.0s" repeatCount="indefinite"/>    </circle>
+    <path d="M 146.0 73 L 149.0 76 L 154.0 70" fill="none" stroke="#00c8a0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+    <text x="150.0" y="100" text-anchor="middle" fill="#e6f1ff" font-size="10" font-weight="bold" font-family="monospace">AWS Certified Cloud Practitioner</text>
+    <text x="150.0" y="115" text-anchor="middle" fill="#4a6582" font-size="9" font-family="monospace">AWS  |  2025</text>
+    <rect x="25.0" y="55" width="250" height="1.5" fill="#00c8a0" opacity="0.1"><animateTransform attributeName="transform" type="translate" from="0 0" to="0 75" dur="3s" begin="0.3s" repeatCount="indefinite"/></rect>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.25s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 12" to="0 0" dur="0.5s" begin="0.25s" fill="freeze"/>
+    <rect x="300.0" y="55" width="250" height="75" rx="8" ry="8" fill="#111d2e" stroke="#ff6b35" stroke-width="0.8" opacity="0.85"/>
+    <rect x="301.0" y="56" width="248" height="73" rx="7" ry="7" fill="#0b1120" opacity="0.4"/>
+    <circle cx="425.0" cy="73" r="10" fill="#ff6b35" opacity="0.12">      <animate attributeName="opacity" values="0.12;0.25;0.12" dur="3s" begin="0.25s" repeatCount="indefinite"/>    </circle>
+    <path d="M 421.0 73 L 424.0 76 L 429.0 70" fill="none" stroke="#ff6b35" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+    <text x="425.0" y="100" text-anchor="middle" fill="#e6f1ff" font-size="10" font-weight="bold" font-family="monospace">Cloud Economics &amp; Technical Accredited</text>
+    <text x="425.0" y="115" text-anchor="middle" fill="#4a6582" font-size="9" font-family="monospace">AWS Partner  |  2025</text>
+    <rect x="300.0" y="55" width="250" height="1.5" fill="#ff6b35" opacity="0.1"><animateTransform attributeName="transform" type="translate" from="0 0" to="0 75" dur="3s" begin="0.55s" repeatCount="indefinite"/></rect>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.5s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 12" to="0 0" dur="0.5s" begin="0.5s" fill="freeze"/>
+    <rect x="575.0" y="55" width="250" height="75" rx="8" ry="8" fill="#111d2e" stroke="#2ecc71" stroke-width="0.8" opacity="0.85"/>
+    <rect x="576.0" y="56" width="248" height="73" rx="7" ry="7" fill="#0b1120" opacity="0.4"/>
+    <circle cx="700.0" cy="73" r="10" fill="#2ecc71" opacity="0.12">      <animate attributeName="opacity" values="0.12;0.25;0.12" dur="3s" begin="0.5s" repeatCount="indefinite"/>    </circle>
+    <path d="M 696.0 73 L 699.0 76 L 704.0 70" fill="none" stroke="#2ecc71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+    <text x="700.0" y="100" text-anchor="middle" fill="#e6f1ff" font-size="10" font-weight="bold" font-family="monospace">Sales Accredited</text>
+    <text x="700.0" y="115" text-anchor="middle" fill="#4a6582" font-size="9" font-family="monospace">AWS Partner  |  2025</text>
+    <rect x="575.0" y="55" width="250" height="1.5" fill="#2ecc71" opacity="0.1"><animateTransform attributeName="transform" type="translate" from="0 0" to="0 75" dur="3s" begin="0.8s" repeatCount="indefinite"/></rect>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.75s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 12" to="0 0" dur="0.5s" begin="0.75s" fill="freeze"/>
+    <rect x="25.0" y="150" width="250" height="75" rx="8" ry="8" fill="#111d2e" stroke="#00c8a0" stroke-width="0.8" opacity="0.85"/>
+    <rect x="26.0" y="151" width="248" height="73" rx="7" ry="7" fill="#0b1120" opacity="0.4"/>
+    <circle cx="150.0" cy="168" r="10" fill="#00c8a0" opacity="0.12">      <animate attributeName="opacity" values="0.12;0.25;0.12" dur="3s" begin="0.75s" repeatCount="indefinite"/>    </circle>
+    <path d="M 146.0 168 L 149.0 171 L 154.0 165" fill="none" stroke="#00c8a0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+    <text x="150.0" y="195" text-anchor="middle" fill="#e6f1ff" font-size="10" font-weight="bold" font-family="monospace">Cloud Economics Essentials</text>
+    <text x="150.0" y="210" text-anchor="middle" fill="#4a6582" font-size="9" font-family="monospace">AWS Partner  |  2025</text>
+    <rect x="25.0" y="150" width="250" height="1.5" fill="#00c8a0" opacity="0.1"><animateTransform attributeName="transform" type="translate" from="0 0" to="0 75" dur="3s" begin="1.05s" repeatCount="indefinite"/></rect>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="1.0s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 12" to="0 0" dur="0.5s" begin="1.0s" fill="freeze"/>
+    <rect x="300.0" y="150" width="250" height="75" rx="8" ry="8" fill="#111d2e" stroke="#ff6b35" stroke-width="0.8" opacity="0.85"/>
+    <rect x="301.0" y="151" width="248" height="73" rx="7" ry="7" fill="#0b1120" opacity="0.4"/>
+    <circle cx="425.0" cy="168" r="10" fill="#ff6b35" opacity="0.12">      <animate attributeName="opacity" values="0.12;0.25;0.12" dur="3s" begin="1.0s" repeatCount="indefinite"/>    </circle>
+    <path d="M 421.0 168 L 424.0 171 L 429.0 165" fill="none" stroke="#ff6b35" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+    <text x="425.0" y="195" text-anchor="middle" fill="#e6f1ff" font-size="10" font-weight="bold" font-family="monospace">GenAI &amp; Dados</text>
+    <text x="425.0" y="210" text-anchor="middle" fill="#4a6582" font-size="9" font-family="monospace">Fundação Bradesco  |  2026</text>
+    <rect x="300.0" y="150" width="250" height="1.5" fill="#ff6b35" opacity="0.1"><animateTransform attributeName="transform" type="translate" from="0 0" to="0 75" dur="3s" begin="1.3s" repeatCount="indefinite"/></rect>
+  </g>
+</svg>
