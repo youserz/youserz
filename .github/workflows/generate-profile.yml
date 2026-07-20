@@ -49,7 +49,11 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "chore: update datastack SVGs [skip ci]"
-            git fetch origin main
-            git rebase origin/main
-            git push origin main
+            for i in 1 2 3; do
+              git fetch origin main
+              git rebase origin/main || { git rebase --abort; continue; }
+              git push origin main && break
+              echo "Push failed, retrying ($i/3)..."
+              sleep 5
+            done
           fi
