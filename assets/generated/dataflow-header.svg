@@ -311,7 +311,7 @@
   <!-- Name & tagline -->
     <text x="425.0" y="175" text-anchor="middle" fill="#f2f0e8" font-size="24" font-weight="bold" font-family="monospace">Bernado Diniz<animate attributeName="opacity" values="1;1;0;1" keyTimes="0;0.7;0.75;1" dur="1.5s" repeatCount="indefinite"/></text>
     <text x="425.0" y="198" text-anchor="middle" fill="#a3a49a" font-size="14" font-family="monospace">Data Engineer · Cloud &amp; Big Data</text>
-    <rect x="573.5" y="186" width="8" height="14" fill="#d8f85b" opacity="0">
+    <rect x="569.0" y="186" width="8" height="14" fill="#d8f85b" opacity="0">
       <animate attributeName="opacity" values="0;1;0" dur="1s" repeatCount="indefinite"/>
     </rect>
 
