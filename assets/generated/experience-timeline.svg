@@ -16,7 +16,7 @@
     <text x="109" y="77" fill="#d8f85b" font-size="13" font-weight="bold" font-family="monospace">Data Engineer Jr</text>
     <text x="109" y="95" fill="#a3a49a" font-size="10" font-family="monospace">Zetta/UFLA - Lavras, MG  |  Aug/2025 - Present</text>
     <circle cx="113" cy="110" r="1.5" fill="#d8f85b" opacity="0.6"/>
-    <text x="121" y="113" fill="#a3a49a" font-size="9" font-family="sans-serif">Incremental ETL pipeline on Azure Databricks (NASA GPM/IMERG)</text>
+    <text x="121" y="113" fill="#a3a49a" font-size="9" font-family="sans-serif">Incremental climate data pipelines on Azure Databricks</text>
     <circle cx="113" cy="126" r="1.5" fill="#d8f85b" opacity="0.6"/>
     <text x="121" y="129" fill="#a3a49a" font-size="9" font-family="sans-serif">Novel architecture: Icechunk/Zarr + Delta Lake + Unity Catalog</text>
     <circle cx="113" cy="142" r="1.5" fill="#d8f85b" opacity="0.6"/>

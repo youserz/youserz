@@ -35,6 +35,19 @@
   <img src="./assets/generated/projects-pipeline.svg" width="850" alt="Featured Pipelines"/>
 </div>
 
+### Projetos de engenharia de dados
+
+| Projeto | Domínio | O que demonstra |
+|---|---|---|
+| [CineLake IMDb](https://github.com/youserz/cinelake-imdb) | Cinema | Snapshots, SCD2, fatos e replay idempotente |
+| [VulnWatch Intelligence](https://github.com/youserz/vulnwatch-intelligence) | Cybersecurity | CISA KEV, EPSS e priorização explicável |
+| [TerraLake ERA5-Land](https://github.com/youserz/terralake-era5land) | Clima | Unidades, acumuladores e cobertura temporal |
+| [ChangeFlow CDC](https://github.com/youserz/changeflow-cdc) | Streaming | Updates, tombstones e reconciliação |
+| [AuditStream Security](https://github.com/youserz/auditstream-security) | Cybersecurity | Janelas temporais e achados rastreáveis |
+| [DependencyAtlas](https://github.com/youserz/dependency-atlas) | Supply chain | SBOM, OSV e lineage por release |
+
+Todos são projetos autorais com execução local, fixtures públicas/sintéticas e arquiteturas cloud documentadas como evolução. Os repositórios antigos não fazem parte da seleção atual.
+
 <br/>
 
 <div align="center">

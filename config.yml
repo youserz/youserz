@@ -64,30 +64,48 @@ data_layers:
       - "Linux"
 
 projects:
-  - repo: "youserz/era5-land-zarr-pipeline"
+  - repo: "youserz/cinelake-imdb"
     layer: 0
     category: "Data Engineering"
     icon_type: "database"
-    description: "ERA5-Land pipeline from GRIB to Zarr for distributed cloud processing"
+    description: "IMDb snapshot ELT with SCD2 history, ratings facts and idempotent replay"
 
-  - repo: "youserz/PB_Compass-DandA-AWS"
+  - repo: "youserz/vulnwatch-intelligence"
     layer: 1
-    category: "Data Engineering"
-    icon_type: "database"
-    description: "AWS pipeline for ingestion, distributed processing and Data Lake architecture"
+    category: "Cybersecurity"
+    icon_type: "terminal"
+    description: "CISA KEV and EPSS prioritization with temporal, explainable decisions"
 
-  - repo: "youserz/voice-chatgpt"
+  - repo: "youserz/terralake-era5land"
     layer: 0
-    category: "Artificial Intelligence"
-    icon_type: "ai"
-    description: "Multimodal assistant with Speech-to-Text, LLM and Text-to-Speech"
+    category: "Climate Data"
+    icon_type: "database"
+    description: "ERA5-Land normalization with units, coverage and accumulation semantics"
+
+  - repo: "youserz/changeflow-cdc"
+    layer: 1
+    category: "Streaming"
+    icon_type: "database"
+    description: "CDC replay with updates, tombstones and deterministic reconciliation"
+
+  - repo: "youserz/auditstream-security"
+    layer: 0
+    category: "Cybersecurity"
+    icon_type: "terminal"
+    description: "Audit event analytics with temporal windows and traceable findings"
+
+  - repo: "youserz/dependency-atlas"
+    layer: 1
+    category: "Supply Chain"
+    icon_type: "database"
+    description: "SBOM and OSV lineage across releases and vulnerable components"
 
 experience:
   - role: "Data Engineer Jr"
     company: "Zetta/UFLA - Lavras, MG"
     period: "Aug/2025 - Present"
     bullets:
-      - "Incremental ETL pipeline on Azure Databricks (NASA GPM/IMERG)"
+      - "Incremental climate data pipelines on Azure Databricks"
       - "Novel architecture: Icechunk/Zarr + Delta Lake + Unity Catalog"
       - "Type conversion and geospatial partitioning optimization"
       - "Automation with Python, Xarray and Databricks Jobs"
