@@ -16,6 +16,8 @@ def _build_cube(theme):
     """
     # Cube center in local coords
     CX, CY = 100, 105
+    accent = theme.get("pipeline_teal", "#d8f85b")
+    bright = theme.get("text_bright", "#f2f0e8")
 
     # -- Top face gradient: cyan to bright teal --
     # -- Left face gradient: blue to purple --
@@ -42,59 +44,59 @@ def _build_cube(theme):
 
       <!-- Left face (blue-purple gradient) -->
       <polygon points="40,65 100,95 100,155 40,125"
-        fill="url(#cube-left)" stroke="#60d0ff" stroke-width="1.2" stroke-linejoin="round" opacity="0.92"/>
+        fill="url(#cube-left)" stroke="{accent}" stroke-width="1.2" stroke-linejoin="round" opacity="0.92"/>
 
       <!-- Left face: data layers (horizontal storage lines) -->
-      <line x1="47" y1="82" x2="93" y2="105" stroke="#60d0ff" stroke-width="0.6" opacity="0.5"/>
-      <line x1="44" y1="102" x2="90" y2="125" stroke="#60d0ff" stroke-width="0.6" opacity="0.5"/>
-      <line x1="42" y1="122" x2="88" y2="145" stroke="#60d0ff" stroke-width="0.6" opacity="0.5"/>
+      <line x1="47" y1="82" x2="93" y2="105" stroke="{accent}" stroke-width="0.6" opacity="0.5"/>
+      <line x1="44" y1="102" x2="90" y2="125" stroke="{accent}" stroke-width="0.6" opacity="0.5"/>
+      <line x1="42" y1="122" x2="88" y2="145" stroke="{accent}" stroke-width="0.6" opacity="0.5"/>
 
       <!-- Left face: node dots on layers -->
-      <circle cx="55" cy="86" r="1.5" fill="#a0f0ff" opacity="0.7">
+      <circle cx="55" cy="86" r="1.5" fill="{bright}" opacity="0.7">
         <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="0.3s" repeatCount="indefinite"/>
       </circle>
-      <circle cx="70" cy="112" r="1.5" fill="#a0f0ff" opacity="0.7">
+      <circle cx="70" cy="112" r="1.5" fill="{bright}" opacity="0.7">
         <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="1s" repeatCount="indefinite"/>
       </circle>
-      <circle cx="60" cy="132" r="1.5" fill="#a0f0ff" opacity="0.7">
+      <circle cx="60" cy="132" r="1.5" fill="{bright}" opacity="0.7">
         <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="1.7s" repeatCount="indefinite"/>
       </circle>
 
       <!-- Right face (teal-cyan gradient) -->
       <polygon points="100,95 160,65 160,125 100,155"
-        fill="url(#cube-right)" stroke="#60d0ff" stroke-width="1.2" stroke-linejoin="round" opacity="0.92"/>
+        fill="url(#cube-right)" stroke="{accent}" stroke-width="1.2" stroke-linejoin="round" opacity="0.92"/>
 
       <!-- Right face: pipeline nodes with connections -->
-      <line x1="115" y1="90" x2="140" y2="100" stroke="#60d0ff" stroke-width="0.6" opacity="0.5"/>
-      <line x1="140" y1="100" x2="130" y2="115" stroke="#60d0ff" stroke-width="0.6" opacity="0.5"/>
-      <line x1="130" y1="115" x2="150" y2="135" stroke="#60d0ff" stroke-width="0.6" opacity="0.5"/>
+      <line x1="115" y1="90" x2="140" y2="100" stroke="{accent}" stroke-width="0.6" opacity="0.5"/>
+      <line x1="140" y1="100" x2="130" y2="115" stroke="{accent}" stroke-width="0.6" opacity="0.5"/>
+      <line x1="130" y1="115" x2="150" y2="135" stroke="{accent}" stroke-width="0.6" opacity="0.5"/>
 
-      <circle cx="115" cy="90" r="2" fill="#a0f0ff" opacity="0.8">
+      <circle cx="115" cy="90" r="2" fill="{bright}" opacity="0.8">
         <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" begin="0s" repeatCount="indefinite"/>
       </circle>
-      <circle cx="140" cy="100" r="2" fill="#a0f0ff" opacity="0.8">
+      <circle cx="140" cy="100" r="2" fill="{bright}" opacity="0.8">
         <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" begin="0.5s" repeatCount="indefinite"/>
       </circle>
-      <circle cx="130" cy="115" r="2" fill="#a0f0ff" opacity="0.8">
+      <circle cx="130" cy="115" r="2" fill="{bright}" opacity="0.8">
         <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" begin="1s" repeatCount="indefinite"/>
       </circle>
-      <circle cx="150" cy="135" r="2" fill="#a0f0ff" opacity="0.8">
+      <circle cx="150" cy="135" r="2" fill="{bright}" opacity="0.8">
         <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" begin="1.5s" repeatCount="indefinite"/>
       </circle>
 
       <!-- Top face (cyan gradient, lightest) -->
       <polygon points="100,35 160,65 100,95 40,65"
-        fill="url(#cube-top)" stroke="#60d0ff" stroke-width="1.2" stroke-linejoin="round" opacity="0.95"/>
+        fill="url(#cube-top)" stroke="{accent}" stroke-width="1.2" stroke-linejoin="round" opacity="0.95"/>
 
       <!-- Top face: data grid (2x2 dotted pattern) -->
-      <line x1="70" y1="50" x2="130" y2="80" stroke="#a0f0ff" stroke-width="0.5" stroke-dasharray="3,3" opacity="0.4"/>
-      <line x1="60" y1="65" x2="130" y2="50" stroke="#a0f0ff" stroke-width="0.5" stroke-dasharray="3,3" opacity="0.4"/>
+      <line x1="70" y1="50" x2="130" y2="80" stroke="{bright}" stroke-width="0.5" stroke-dasharray="3,3" opacity="0.4"/>
+      <line x1="60" y1="65" x2="130" y2="50" stroke="{bright}" stroke-width="0.5" stroke-dasharray="3,3" opacity="0.4"/>
 
       <!-- Top face: central data node -->
-      <circle cx="100" cy="65" r="3" fill="#ffffff" opacity="0.6">
+      <circle cx="100" cy="65" r="3" fill="{bright}" opacity="0.6">
         <animate attributeName="opacity" values="0.3;0.9;0.3" dur="2.5s" repeatCount="indefinite"/>
       </circle>
-      <circle cx="100" cy="65" r="6" fill="none" stroke="#a0f0ff" stroke-width="0.5" opacity="0.3">
+      <circle cx="100" cy="65" r="6" fill="none" stroke="{bright}" stroke-width="0.5" opacity="0.3">
         <animate attributeName="opacity" values="0.1;0.4;0.1" dur="2.5s" repeatCount="indefinite"/>
         <animate attributeName="r" values="5;8;5" dur="2.5s" repeatCount="indefinite"/>
       </circle>
@@ -108,9 +110,9 @@ def _build_particles(username, theme):
     particles = []
     pipe_y_positions = [55, 100, 145]
     pipe_colors = [
-        theme.get("pipeline_teal", "#00c8a0"),
-        theme.get("spark_orange", "#ff6b35"),
-        theme.get("lake_green", "#2ecc71"),
+        theme.get("pipeline_teal", "#d8f85b"),
+        theme.get("spark_orange", "#ff795c"),
+        theme.get("lake_green", "#91b7ff"),
     ]
 
     for pipe_idx, py in enumerate(pipe_y_positions):
@@ -133,9 +135,9 @@ def _build_pipes(theme):
     """Build horizontal pipeline tubes with gradients."""
     pipe_y_positions = [55, 100, 145]
     colors = [
-        theme.get("pipeline_teal", "#00c8a0"),
-        theme.get("spark_orange", "#ff6b35"),
-        theme.get("lake_green", "#2ecc71"),
+        theme.get("pipeline_teal", "#d8f85b"),
+        theme.get("spark_orange", "#ff795c"),
+        theme.get("lake_green", "#91b7ff"),
     ]
     pipes = []
     for idx, py in enumerate(pipe_y_positions):
@@ -177,13 +179,13 @@ def _build_starfield(username, theme):
     sd = deterministic_random(f"{username}_header_sd", 30, 3.0, 7.0)
 
     accent_colors = {
-        0: theme.get("pipeline_teal", "#00c8a0"),
-        5: theme.get("spark_orange", "#ff6b35"),
-        10: theme.get("lake_green", "#2ecc71"),
+        0: theme.get("pipeline_teal", "#d8f85b"),
+        5: theme.get("spark_orange", "#ff795c"),
+        10: theme.get("lake_green", "#91b7ff"),
     }
 
     for i in range(30):
-        fill = accent_colors.get(i % 15, theme.get("text_faint", "#4a6582"))
+        fill = accent_colors.get(i % 15, theme.get("text_faint", "#64675d"))
         stars.append(
             f'    <circle cx="{sx[i]:.1f}" cy="{sy[i]:.1f}" r="{sr[i]:.2f}" '
             f'fill="{fill}" opacity="{so[i]:.2f}">\n'
@@ -286,28 +288,28 @@ def render(config: dict, theme: dict, data_layers: list, projects: list) -> str:
     <!-- Cube glow radial gradient -->
     <radialGradient id="cube-glow" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="{theme['pipeline_teal']}" stop-opacity="0.5"/>
-      <stop offset="40%" stop-color="#6b4fa0" stop-opacity="0.2"/>
+      <stop offset="40%" stop-color="{theme['spark_orange']}" stop-opacity="0.2"/>
       <stop offset="100%" stop-color="{theme['pipeline_teal']}" stop-opacity="0"/>
     </radialGradient>
 
     <!-- Cube top face gradient (cyan, lightest) -->
     <linearGradient id="cube-top" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.30"/>
-      <stop offset="100%" stop-color="#00a8cc" stop-opacity="0.18"/>
+      <stop offset="0%" stop-color="{theme['pipeline_teal']}" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="{theme['text_bright']}" stop-opacity="0.12"/>
     </linearGradient>
 
     <!-- Cube left face gradient (blue to purple) -->
     <linearGradient id="cube-left" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1a1a6e" stop-opacity="0.55"/>
-      <stop offset="50%" stop-color="#3b3b8c" stop-opacity="0.45"/>
-      <stop offset="100%" stop-color="#6b4fa0" stop-opacity="0.35"/>
+      <stop offset="0%" stop-color="{theme['depth']}" stop-opacity="0.72"/>
+      <stop offset="50%" stop-color="{theme['lake_surface']}" stop-opacity="0.64"/>
+      <stop offset="100%" stop-color="{theme['spark_orange']}" stop-opacity="0.30"/>
     </linearGradient>
 
     <!-- Cube right face gradient (teal to cyan) -->
     <linearGradient id="cube-right" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#006ca0" stop-opacity="0.45"/>
-      <stop offset="50%" stop-color="#0088cc" stop-opacity="0.40"/>
-      <stop offset="100%" stop-color="#00a0d0" stop-opacity="0.30"/>
+      <stop offset="0%" stop-color="{theme['lake_green']}" stop-opacity="0.38"/>
+      <stop offset="50%" stop-color="{theme['pipeline_teal']}" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="{theme['text_bright']}" stop-opacity="0.16"/>
     </linearGradient>
   </defs>
 

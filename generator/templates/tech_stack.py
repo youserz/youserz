@@ -1,26 +1,21 @@
-"""SVG template: HUD Data Dashboard — isometric 3D cubes (left) + futuristic radar (right).
-
-Internal neon palette hardcoded for a premium HUD/cyberpunk aesthetic.
-"""
+"""SVG template: themed data dashboard with stacked layers and radar."""
 
 import math
-from generator.utils import esc
+from generator.utils import esc, resolve_layer_colors
 
 WIDTH = 850
 
-# ── Neon HUD palette ─────────────────────────────────────────────
-NEON = {
-    "bg": "#0A1020",
-    "surface": "#0D1832",
-    "grid": "#162340",
-    "divider": "#1c3050",
-    "text_bright": "#e0f0ff",
-    "text_dim": "#8da9c4",
-    "text_faint": "#5a7088",
-}
-
-# Layer colors by index (cyan, orange, green, blue)
-LAYER_NEON = ["#00E5FF", "#FF7A30", "#29FF87", "#00D4FF"]
+def _resolve_palette(theme):
+    """Map the shared portfolio theme to the dashboard surface tokens."""
+    return {
+        "bg": theme["depth"],
+        "surface": theme["lake_surface"],
+        "grid": theme["grid"],
+        "divider": theme["grid"],
+        "text_bright": theme["text_bright"],
+        "text_dim": theme["text_dim"],
+        "text_faint": theme["text_faint"],
+    }
 
 
 def _lighten(hex_color: str, factor: float = 1.6) -> str:
@@ -41,7 +36,7 @@ def _darken(hex_color: str, factor: float = 0.45) -> str:
 
 # ── Cube builder ──────────────────────────────────────────────────
 
-def _build_cube(i, cx, y, w, h, color, title, items):
+def _build_cube(i, cx, y, w, h, color, title, items, palette):
     """Build a 3D isometric data cube.
 
     Args:
@@ -108,13 +103,13 @@ def _build_cube(i, cx, y, w, h, color, title, items):
     # Front face
     parts.append(
         f'    <rect x="{fx1:.1f}" y="{fy1:.1f}" width="{w}" height="{h}" rx="5" ry="5" '
-        f'fill="{NEON["surface"]}" stroke="{color}" stroke-width="1" opacity="0.92"/>'
+        f'fill="{palette["surface"]}" stroke="{color}" stroke-width="1" opacity="0.92"/>'
     )
 
     # Front face inner dark fill
     parts.append(
         f'    <rect x="{fx1 + 2:.1f}" y="{fy1 + 2:.1f}" width="{w - 4}" height="{h - 4}" rx="4" ry="4" '
-        f'fill="{NEON["bg"]}" opacity="0.55"/>'
+        f'fill="{palette["bg"]}" opacity="0.55"/>'
     )
 
     # Title centered at top of front face
@@ -150,7 +145,7 @@ def _build_cube(i, cx, y, w, h, color, title, items):
         )
         parts.append(
             f'    <text x="{bx + capsule_w / 2:.1f}" y="{by + 11:.1f}" text-anchor="middle" '
-            f'fill="{NEON["text_dim"]}" font-size="7.5" font-family="monospace">{esc(item)}</text>'
+            f'fill="{palette["text_dim"]}" font-size="7.5" font-family="monospace">{esc(item)}</text>'
         )
 
     # Scan line
@@ -167,7 +162,7 @@ def _build_cube(i, cx, y, w, h, color, title, items):
 
 # ── Connection between cubes ──────────────────────────────────────
 
-def _build_connection(cx, y_top, y_bot, color, i):
+def _build_connection(cx, y_top, y_bot, color, i, palette):
     """Vertical line + pulsing node between two stacked cubes."""
     delay = i * 0.4
     mid_y = (y_top + y_bot) / 2
@@ -175,7 +170,7 @@ def _build_connection(cx, y_top, y_bot, color, i):
         f'  <g>'
         f'    <line x1="{cx}" y1="{y_top}" x2="{cx}" y2="{y_bot}" '
         f'stroke="{color}" stroke-width="0.8" stroke-dasharray="3,4" opacity="0.35"/>'
-        f'    <circle cx="{cx}" cy="{mid_y}" r="4" fill="{NEON["bg"]}" stroke="{color}" stroke-width="1" opacity="0.8">'
+        f'    <circle cx="{cx}" cy="{mid_y}" r="4" fill="{palette["bg"]}" stroke="{color}" stroke-width="1" opacity="0.8">'
         f'      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="{delay}s" repeatCount="indefinite"/>'
         f'    </circle>'
         f'    <circle cx="{cx}" cy="{mid_y}" r="1.5" fill="{color}" opacity="0.9"/>'
@@ -185,7 +180,7 @@ def _build_connection(cx, y_top, y_bot, color, i):
 
 # ── HUD Radar chart ───────────────────────────────────────────────
 
-def _build_radar(cx, cy, radius, layers, colors):
+def _build_radar(cx, cy, radius, layers, colors, palette):
     """Build a futuristic HUD radar chart.
 
     Args:
@@ -202,7 +197,7 @@ def _build_radar(cx, cy, radius, layers, colors):
     for r in [radius * 0.33, radius * 0.66, radius]:
         parts.append(
             f'    <circle cx="{cx}" cy="{cy}" r="{r:.0f}" '
-            f'fill="none" stroke="{NEON["grid"]}" stroke-width="0.6" '
+            f'fill="none" stroke="{palette["grid"]}" stroke-width="0.6" '
             f'stroke-dasharray="3,6" opacity="0.25"/>'
         )
 
@@ -214,7 +209,7 @@ def _build_radar(cx, cy, radius, layers, colors):
         ey = cy + radius * math.sin(rad)
         parts.append(
             f'    <line x1="{cx}" y1="{cy}" x2="{ex:.1f}" y2="{ey:.1f}" '
-            f'stroke="{NEON["grid"]}" stroke-width="0.5" opacity="0.3"/>'
+            f'stroke="{palette["grid"]}" stroke-width="0.5" opacity="0.3"/>'
         )
 
     # ── Sector fills (translucent) ──
@@ -285,7 +280,7 @@ def _build_radar(cx, cy, radius, layers, colors):
         )
         # Score below
         parts.append(
-            f'    <text x="{lx:.1f}" y="{ly + 13:.1f}" fill="{NEON["text_faint"]}" font-size="8" '
+            f'    <text x="{lx:.1f}" y="{ly + 13:.1f}" fill="{palette["text_faint"]}" font-size="8" '
             f'font-family="monospace" text-anchor="{anchor}" dominant-baseline="middle">({score})</text>'
         )
 
@@ -307,13 +302,13 @@ def _build_radar(cx, cy, radius, layers, colors):
 
 # ── HUD micro-details ─────────────────────────────────────────────
 
-def _build_hud_elements(width, height):
+def _build_hud_elements(width, height, palette):
     """Corner brackets, grid dots, fake coords, scan line."""
     parts = []
 
     # Corner brackets
     bl = 12
-    brk = NEON["divider"]
+    brk = palette["divider"]
     parts.append(
         f'  <g opacity="0.4">'
         f'    <polyline points="6,{bl + 6} 6,6 {bl + 6},6" fill="none" stroke="{brk}" stroke-width="1"/>'
@@ -325,13 +320,13 @@ def _build_hud_elements(width, height):
 
     # Fake coordinate text
     parts.append(
-        f'  <text x="{width - 20}" y="16" fill="{NEON["text_faint"]}" font-size="7" font-family="monospace" '
+        f'  <text x="{width - 20}" y="16" fill="{palette["text_faint"]}" font-size="7" font-family="monospace" '
         f'text-anchor="end" opacity="0.3">SYS::DATA_LK_v2.4</text>'
     )
 
     # Scan line
     parts.append(
-        f'  <rect x="6" y="6" width="{width - 12}" height="1" fill="{NEON["text_bright"]}" opacity="0.03">'
+        f'  <rect x="6" y="6" width="{width - 12}" height="1" fill="{palette["text_bright"]}" opacity="0.03">'
         f'<animateTransform attributeName="transform" type="translate" from="0 0" to="0 {height - 12}" '
         f'dur="8s" repeatCount="indefinite"/>'
         f'</rect>'
@@ -340,13 +335,13 @@ def _build_hud_elements(width, height):
     return "\n".join(parts)
 
 
-def _build_grid():
+def _build_grid(palette):
     """Faint background grid dots."""
     lines = []
     for x in range(40, WIDTH, 60):
         for y in range(40, 600, 40):
             lines.append(
-                f'  <circle cx="{x}" cy="{y}" r="0.6" fill="{NEON["grid"]}" opacity="0.12"/>'
+                f'  <circle cx="{x}" cy="{y}" r="0.6" fill="{palette["grid"]}" opacity="0.12"/>'
             )
     return "\n".join(lines)
 
@@ -356,8 +351,9 @@ def _build_grid():
 def render(languages: dict, data_layers: list, theme: dict, exclude: list, max_display: int) -> str:
     """Render the HUD Data Dashboard SVG."""
 
+    palette = _resolve_palette(theme)
     n_layers = len(data_layers)
-    layer_colors = [LAYER_NEON[i % len(LAYER_NEON)] for i in range(n_layers)]
+    layer_colors = resolve_layer_colors(data_layers, theme)
 
     # ── Left: Stacked cubes ──
     cube_w = 320
@@ -375,7 +371,7 @@ def render(languages: dict, data_layers: list, theme: dict, exclude: list, max_d
 
         cubes.append(
             _build_cube(i, cube_cx, cy, cube_w, cube_h,
-                        color, layer["name"], layer.get("items", []))
+                        color, layer["name"], layer.get("items", []), palette)
         )
 
         # Connection to next
@@ -383,7 +379,7 @@ def render(languages: dict, data_layers: list, theme: dict, exclude: list, max_d
             next_top = cy + cube_h
             next_bot = start_y + (i + 1) * (cube_h + gap)
             connections.append(
-                _build_connection(cube_cx, next_top, next_bot, color, i)
+                _build_connection(cube_cx, next_top, next_bot, color, i, palette)
             )
 
     cubes_str = "\n".join(cubes)
@@ -394,7 +390,7 @@ def render(languages: dict, data_layers: list, theme: dict, exclude: list, max_d
     radar_cy = 265
     radar_radius = 105
 
-    radar = _build_radar(radar_cx, radar_cy, radar_radius, data_layers, layer_colors)
+    radar = _build_radar(radar_cx, radar_cy, radar_radius, data_layers, layer_colors, palette)
 
     # ── Dynamic height ──
     left_h = start_y + n_layers * (cube_h + gap) - gap + 40
@@ -402,8 +398,8 @@ def render(languages: dict, data_layers: list, theme: dict, exclude: list, max_d
     height = max(500, left_h, radar_h)
 
     # ── HUD elements ──
-    hud = _build_hud_elements(WIDTH, height)
-    grid = _build_grid()
+    hud = _build_hud_elements(WIDTH, height, palette)
+    grid = _build_grid(palette)
 
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{height}" viewBox="0 0 {WIDTH} {height}">
   <defs>
@@ -435,7 +431,7 @@ def render(languages: dict, data_layers: list, theme: dict, exclude: list, max_d
 
   <!-- Background -->
   <rect x="0.5" y="0.5" width="{WIDTH - 1}" height="{height - 1}" rx="12" ry="12"
-        fill="{NEON['bg']}" stroke="{NEON['divider']}" stroke-width="1"/>
+        fill="{palette['bg']}" stroke="{palette['divider']}" stroke-width="1"/>
 
   <!-- Background grid -->
 {grid}
@@ -444,13 +440,13 @@ def render(languages: dict, data_layers: list, theme: dict, exclude: list, max_d
 {hud}
 
   <!-- Left title -->
-  <text x="30" y="40" fill="{NEON['text_faint']}" font-size="10" font-family="monospace" letter-spacing="2.5">STACK LAYERS</text>
+  <text x="30" y="40" fill="{palette['text_faint']}" font-size="10" font-family="monospace" letter-spacing="2.5">STACK LAYERS</text>
 
   <!-- Vertical divider -->
-  <line x1="425" y1="24" x2="425" y2="{height - 24}" stroke="{NEON['divider']}" stroke-width="0.8" opacity="0.5"/>
+  <line x1="425" y1="24" x2="425" y2="{height - 24}" stroke="{palette['divider']}" stroke-width="0.8" opacity="0.5"/>
 
   <!-- Right title -->
-  <text x="460" y="40" fill="{NEON['text_faint']}" font-size="10" font-family="monospace" letter-spacing="2.5">CORE COMPETENCIES</text>
+  <text x="460" y="40" fill="{palette['text_faint']}" font-size="10" font-family="monospace" letter-spacing="2.5">CORE COMPETENCIES</text>
 
   <!-- Connections (behind cubes) -->
 {connections_str}

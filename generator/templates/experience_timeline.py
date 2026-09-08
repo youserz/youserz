@@ -110,9 +110,9 @@ def render(experiences: list, theme: dict) -> str:
     card_x = 95
 
     timeline_colors = [
-        theme.get("pipeline_teal", "#00c8a0"),
-        theme.get("spark_orange", "#ff6b35"),
-        theme.get("lake_green", "#2ecc71"),
+        theme.get("pipeline_teal", "#d8f85b"),
+        theme.get("spark_orange", "#ff795c"),
+        theme.get("lake_green", "#91b7ff"),
     ]
 
     cards = []

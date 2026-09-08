@@ -70,7 +70,7 @@ def validate_config(config: dict) -> dict:
     for key, value in user_theme.items():
         if not isinstance(value, str) or not HEX_COLOR_RE.match(value):
             raise ConfigError(
-                f"theme.{key} must be a valid hex color (e.g. #00c8a0), got '{value}'."
+                f"theme.{key} must be a valid hex color (e.g. #d8f85b), got '{value}'."
             )
 
     # Apply theme defaults

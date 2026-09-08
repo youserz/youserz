@@ -13,14 +13,14 @@ from generator.utils import (
 
 def test_resolve_theme_defaults():
     theme = resolve_theme({})
-    assert theme["depth"] == "#0b1120"
-    assert theme["pipeline_teal"] == "#00c8a0"
+    assert theme["depth"] == "#11120f"
+    assert theme["pipeline_teal"] == "#d8f85b"
 
 
 def test_resolve_theme_override():
     theme = resolve_theme({"depth": "#000000"})
     assert theme["depth"] == "#000000"
-    assert theme["lake_surface"] == "#111d2e"
+    assert theme["lake_surface"] == "#181a16"
 
 
 def test_resolve_layer_colors():
@@ -30,8 +30,8 @@ def test_resolve_layer_colors():
     ]
     theme = resolve_theme({})
     colors = resolve_layer_colors(layers, theme)
-    assert colors[0] == "#ff6b35"
-    assert colors[1] == "#2ecc71"
+    assert colors[0] == "#ff795c"
+    assert colors[1] == "#91b7ff"
 
 
 def test_format_number():

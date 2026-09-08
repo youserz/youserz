@@ -26,7 +26,7 @@ def _build_project_icon(icon_type, cx, cy, color):
             f'    <circle cx="{cx}" cy="{cy}" r="4" fill="{color}" opacity="0.4">',
             f'      <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2.5s" repeatCount="indefinite"/>',
             f'    </circle>',
-            f'    <circle cx="{cx}" cy="{cy}" r="1.5" fill="#ffffff" opacity="0.9"/>',
+            f'    <circle cx="{cx}" cy="{cy}" r="1.5" fill="{color}" opacity="1"/>',
         ]
     elif icon_type == "ai":
         # AI / neural network icon: connected nodes
@@ -60,7 +60,7 @@ def _build_project_icon(icon_type, cx, cy, color):
             f'    <circle cx="{cx}" cy="{cy}" r="5" fill="{color}" opacity="0.7">',
             f'      <animate attributeName="opacity" values="0.5;0.9;0.5" dur="3s" repeatCount="indefinite"/>',
             f'    </circle>',
-            f'    <circle cx="{cx}" cy="{cy}" r="2" fill="#ffffff" opacity="0.9"/>',
+            f'    <circle cx="{cx}" cy="{cy}" r="2" fill="{color}" opacity="1"/>',
         ]
 
 
@@ -226,7 +226,7 @@ def _build_title_area(n, width, height, theme):
         f'font-family="monospace" letter-spacing="3">FEATURED SYSTEMS</text>'
     )
     # Pulsing status dot
-    cyan = theme.get("pipeline_teal", "#00c8a0")
+    cyan = theme.get("pipeline_teal", "#d8f85b")
     title_parts.append(
         f'  <circle cx="218" cy="34" r="3" fill="{cyan}" opacity="0.8">'
         f'<animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>'
@@ -329,7 +329,7 @@ def _build_project_card(i, proj, layer, color, card_width, card_x, theme):
 
 def _build_scan_line(width, theme):
     """Build the global scan line."""
-    cyan = theme.get("pipeline_teal", "#00c8a0")
+    cyan = theme.get("pipeline_teal", "#d8f85b")
     return (
         f'  <rect x="12" y="50" width="{width - 24}" height="1.5" '
         f'fill="{cyan}" opacity="0.08">'

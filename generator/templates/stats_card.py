@@ -20,7 +20,7 @@ def render(stats: dict, metrics: list, theme: dict) -> str:
     dividers = []
     for i, key in enumerate(metrics):
         cx = cell_width * i + cell_width / 2
-        icon_color = theme.get(METRIC_COLORS.get(key, "pipeline_teal"), "#00c8a0")
+        icon_color = theme.get(METRIC_COLORS.get(key, "pipeline_teal"), "#d8f85b")
         value = format_number(stats.get(key, 0))
         label = METRIC_LABELS.get(key, key.title())
         icon_path = METRIC_ICONS.get(key, "")

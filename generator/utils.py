@@ -7,17 +7,17 @@ from xml.sax.saxutils import escape as xml_escape
 
 HEX_COLOR_RE = re.compile(r"^#[0-9a-fA-F]{6}$")
 
-# Default Data Lake / Pipeline theme palette
+# Default portfolio identity palette
 DEFAULT_THEME = {
-    "depth": "#0b1120",
-    "lake_surface": "#111d2e",
-    "grid": "#1e3a5f",
-    "pipeline_teal": "#00c8a0",
-    "spark_orange": "#ff6b35",
-    "lake_green": "#2ecc71",
-    "text_bright": "#e6f1ff",
-    "text_dim": "#8da9c4",
-    "text_faint": "#4a6582",
+    "depth": "#11120f",
+    "lake_surface": "#181a16",
+    "grid": "#34372e",
+    "pipeline_teal": "#d8f85b",
+    "spark_orange": "#ff795c",
+    "lake_green": "#91b7ff",
+    "text_bright": "#f2f0e8",
+    "text_dim": "#a3a49a",
+    "text_faint": "#64675d",
 }
 
 
@@ -28,7 +28,7 @@ def resolve_theme(user_theme: dict) -> dict:
 
 def resolve_layer_colors(data_layers: list, theme: dict) -> list:
     """Return a list of hex color strings, one per data layer, resolved from the theme."""
-    fallback = theme.get("pipeline_teal", "#00c8a0")
+    fallback = theme.get("pipeline_teal", "#d8f85b")
     return [
         theme.get(layer.get("color", "pipeline_teal"), fallback)
         for layer in data_layers
