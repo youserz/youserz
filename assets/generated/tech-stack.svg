@@ -263,9 +263,9 @@
     <rect x="270.0" y="104.0" width="90" height="16" rx="6" ry="6" fill="#00E5FF" opacity="0.10" stroke="#00E5FF" stroke-width="0.5" stroke-opacity="0.3">      <animate attributeName="opacity" values="0.10;0.18;0.10" dur="3s" begin="0.12s" repeatCount="indefinite"/>    </rect>
     <text x="315.0" y="115.0" text-anchor="middle" fill="#8da9c4" font-size="7.5" font-family="monospace">PySpark</text>
     <rect x="80.0" y="123.0" width="90" height="16" rx="6" ry="6" fill="#00E5FF" opacity="0.10" stroke="#00E5FF" stroke-width="0.5" stroke-opacity="0.3">      <animate attributeName="opacity" values="0.10;0.18;0.10" dur="3s" begin="0.18s" repeatCount="indefinite"/>    </rect>
-    <text x="125.0" y="134.0" text-anchor="middle" fill="#8da9c4" font-size="7.5" font-family="monospace">Java</text>
+    <text x="125.0" y="134.0" text-anchor="middle" fill="#8da9c4" font-size="7.5" font-family="monospace">C++</text>
     <rect x="175.0" y="123.0" width="90" height="16" rx="6" ry="6" fill="#00E5FF" opacity="0.10" stroke="#00E5FF" stroke-width="0.5" stroke-opacity="0.3">      <animate attributeName="opacity" values="0.10;0.18;0.10" dur="3s" begin="0.24s" repeatCount="indefinite"/>    </rect>
-    <text x="220.0" y="134.0" text-anchor="middle" fill="#8da9c4" font-size="7.5" font-family="monospace">C++</text>
+    <text x="220.0" y="134.0" text-anchor="middle" fill="#8da9c4" font-size="7.5" font-family="monospace">Jupyter</text>
     <rect x="60.0" y="72.0" width="320" height="1.5" fill="#00E5FF" opacity="0.12"><animateTransform attributeName="transform" type="translate" from="0 0" to="0 95" dur="3.5s" begin="0.3s" repeatCount="indefinite"/></rect>
   </g>
   <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.3s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 10" to="0 0" dur="0.5s" begin="0.3s" fill="freeze"/>
@@ -277,11 +277,19 @@
     <rect x="62.0" y="193.0" width="316" height="91" rx="4" ry="4" fill="#0A1020" opacity="0.55"/>
     <text x="220" y="213" text-anchor="middle" fill="#FF7A30" font-size="12" font-weight="bold" font-family="monospace" filter="url(#text-glow)">Cloud &amp; Data Platforms</text>
     <rect x="80.0" y="223.0" width="90" height="16" rx="6" ry="6" fill="#FF7A30" opacity="0.10" stroke="#FF7A30" stroke-width="0.5" stroke-opacity="0.3">      <animate attributeName="opacity" values="0.10;0.18;0.10" dur="3s" begin="0.3s" repeatCount="indefinite"/>    </rect>
-    <text x="125.0" y="234.0" text-anchor="middle" fill="#8da9c4" font-size="7.5" font-family="monospace">Azure</text>
+    <text x="125.0" y="234.0" text-anchor="middle" fill="#8da9c4" font-size="7.5" font-family="monospace">AWS S3</text>
     <rect x="175.0" y="223.0" width="90" height="16" rx="6" ry="6" fill="#FF7A30" opacity="0.10" stroke="#FF7A30" stroke-width="0.5" stroke-opacity="0.3">      <animate attributeName="opacity" values="0.10;0.18;0.10" dur="3s" begin="0.36s" repeatCount="indefinite"/>    </rect>
-    <text x="220.0" y="234.0" text-anchor="middle" fill="#8da9c4" font-size="7.5" font-family="monospace">AWS</text>
+    <text x="220.0" y="234.0" text-anchor="middle" fill="#8da9c4" font-size="7.5" font-family="monospace">AWS Glue</text>
     <rect x="270.0" y="223.0" width="90" height="16" rx="6" ry="6" fill="#FF7A30" opacity="0.10" stroke="#FF7A30" stroke-width="0.5" stroke-opacity="0.3">      <animate attributeName="opacity" values="0.10;0.18;0.10" dur="3s" begin="0.42s" repeatCount="indefinite"/>    </rect>
-    <text x="315.0" y="234.0" text-anchor="middle" fill="#8da9c4" font-size="7.5" font-family="monospace">Databricks</text>
+    <text x="315.0" y="234.0" text-anchor="middle" fill="#8da9c4" font-size="7.5" font-family="monospace">AWS Athena</text>
+    <rect x="80.0" y="242.0" width="90" height="16" rx="6" ry="6" fill="#FF7A30" opacity="0.10" stroke="#FF7A30" stroke-width="0.5" stroke-opacity="0.3">      <animate attributeName="opacity" values="0.10;0.18;0.10" dur="3s" begin="0.48s" repeatCount="indefinite"/>    </rect>
+    <text x="125.0" y="253.0" text-anchor="middle" fill="#8da9c4" font-size="7.5" font-family="monospace">AWS Redshift</text>
+    <rect x="175.0" y="242.0" width="90" height="16" rx="6" ry="6" fill="#FF7A30" opacity="0.10" stroke="#FF7A30" stroke-width="0.5" stroke-opacity="0.3">      <animate attributeName="opacity" values="0.10;0.18;0.10" dur="3s" begin="0.54s" repeatCount="indefinite"/>    </rect>
+    <text x="220.0" y="253.0" text-anchor="middle" fill="#8da9c4" font-size="7.5" font-family="monospace">Azure Data Lake</text>
+    <rect x="270.0" y="242.0" width="90" height="16" rx="6" ry="6" fill="#FF7A30" opacity="0.10" stroke="#FF7A30" stroke-width="0.5" stroke-opacity="0.3">      <animate attributeName="opacity" values="0.10;0.18;0.10" dur="3s" begin="0.6s" repeatCount="indefinite"/>    </rect>
+    <text x="315.0" y="253.0" text-anchor="middle" fill="#8da9c4" font-size="7.5" font-family="monospace">Databricks</text>
+    <rect x="80.0" y="261.0" width="90" height="16" rx="6" ry="6" fill="#FF7A30" opacity="0.10" stroke="#FF7A30" stroke-width="0.5" stroke-opacity="0.3">      <animate attributeName="opacity" values="0.10;0.18;0.10" dur="3s" begin="0.6599999999999999s" repeatCount="indefinite"/>    </rect>
+    <text x="125.0" y="272.0" text-anchor="middle" fill="#8da9c4" font-size="7.5" font-family="monospace">Unity Catalog</text>
     <rect x="60.0" y="191.0" width="320" height="1.5" fill="#FF7A30" opacity="0.12"><animateTransform attributeName="transform" type="translate" from="0 0" to="0 95" dur="3.5s" begin="0.6s" repeatCount="indefinite"/></rect>
   </g>
   <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.6s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 10" to="0 0" dur="0.5s" begin="0.6s" fill="freeze"/>
@@ -291,17 +299,17 @@
     <line x1="66.0" y1="310" x2="374.0" y2="310" stroke="#29FF87" stroke-width="1.2" opacity="0.9" filter="url(#edge-glow)"/>
     <rect x="60.0" y="310.0" width="320" height="95" rx="5" ry="5" fill="#0D1832" stroke="#29FF87" stroke-width="1" opacity="0.92"/>
     <rect x="62.0" y="312.0" width="316" height="91" rx="4" ry="4" fill="#0A1020" opacity="0.55"/>
-    <text x="220" y="332" text-anchor="middle" fill="#29FF87" font-size="12" font-weight="bold" font-family="monospace" filter="url(#text-glow)">Databases &amp; Modeling</text>
+    <text x="220" y="332" text-anchor="middle" fill="#29FF87" font-size="12" font-weight="bold" font-family="monospace" filter="url(#text-glow)">Storage &amp; Modeling</text>
     <rect x="80.0" y="342.0" width="90" height="16" rx="6" ry="6" fill="#29FF87" opacity="0.10" stroke="#29FF87" stroke-width="0.5" stroke-opacity="0.3">      <animate attributeName="opacity" values="0.10;0.18;0.10" dur="3s" begin="0.6s" repeatCount="indefinite"/>    </rect>
-    <text x="125.0" y="353.0" text-anchor="middle" fill="#8da9c4" font-size="7.5" font-family="monospace">PostgreSQL</text>
+    <text x="125.0" y="353.0" text-anchor="middle" fill="#8da9c4" font-size="7.5" font-family="monospace">Delta Lake</text>
     <rect x="175.0" y="342.0" width="90" height="16" rx="6" ry="6" fill="#29FF87" opacity="0.10" stroke="#29FF87" stroke-width="0.5" stroke-opacity="0.3">      <animate attributeName="opacity" values="0.10;0.18;0.10" dur="3s" begin="0.6599999999999999s" repeatCount="indefinite"/>    </rect>
-    <text x="220.0" y="353.0" text-anchor="middle" fill="#8da9c4" font-size="7.5" font-family="monospace">Delta Lake</text>
+    <text x="220.0" y="353.0" text-anchor="middle" fill="#8da9c4" font-size="7.5" font-family="monospace">Zarr</text>
     <rect x="270.0" y="342.0" width="90" height="16" rx="6" ry="6" fill="#29FF87" opacity="0.10" stroke="#29FF87" stroke-width="0.5" stroke-opacity="0.3">      <animate attributeName="opacity" values="0.10;0.18;0.10" dur="3s" begin="0.72s" repeatCount="indefinite"/>    </rect>
-    <text x="315.0" y="353.0" text-anchor="middle" fill="#8da9c4" font-size="7.5" font-family="monospace">Data Modeling</text>
+    <text x="315.0" y="353.0" text-anchor="middle" fill="#8da9c4" font-size="7.5" font-family="monospace">Icechunk</text>
     <rect x="80.0" y="361.0" width="90" height="16" rx="6" ry="6" fill="#29FF87" opacity="0.10" stroke="#29FF87" stroke-width="0.5" stroke-opacity="0.3">      <animate attributeName="opacity" values="0.10;0.18;0.10" dur="3s" begin="0.78s" repeatCount="indefinite"/>    </rect>
-    <text x="125.0" y="372.0" text-anchor="middle" fill="#8da9c4" font-size="7.5" font-family="monospace">Star Schema</text>
+    <text x="125.0" y="372.0" text-anchor="middle" fill="#8da9c4" font-size="7.5" font-family="monospace">Data Lakes</text>
     <rect x="175.0" y="361.0" width="90" height="16" rx="6" ry="6" fill="#29FF87" opacity="0.10" stroke="#29FF87" stroke-width="0.5" stroke-opacity="0.3">      <animate attributeName="opacity" values="0.10;0.18;0.10" dur="3s" begin="0.84s" repeatCount="indefinite"/>    </rect>
-    <text x="220.0" y="372.0" text-anchor="middle" fill="#8da9c4" font-size="7.5" font-family="monospace">Snowflake Schema</text>
+    <text x="220.0" y="372.0" text-anchor="middle" fill="#8da9c4" font-size="7.5" font-family="monospace">Partitioning</text>
     <rect x="270.0" y="361.0" width="90" height="16" rx="6" ry="6" fill="#29FF87" opacity="0.10" stroke="#29FF87" stroke-width="0.5" stroke-opacity="0.3">      <animate attributeName="opacity" values="0.10;0.18;0.10" dur="3s" begin="0.8999999999999999s" repeatCount="indefinite"/>    </rect>
     <text x="315.0" y="372.0" text-anchor="middle" fill="#8da9c4" font-size="7.5" font-family="monospace">SQL Optimization</text>
     <rect x="60.0" y="310.0" width="320" height="1.5" fill="#29FF87" opacity="0.12"><animateTransform attributeName="transform" type="translate" from="0 0" to="0 95" dur="3.5s" begin="0.8999999999999999s" repeatCount="indefinite"/></rect>
@@ -317,19 +325,15 @@
     <rect x="80.0" y="461.0" width="90" height="16" rx="6" ry="6" fill="#00D4FF" opacity="0.10" stroke="#00D4FF" stroke-width="0.5" stroke-opacity="0.3">      <animate attributeName="opacity" values="0.10;0.18;0.10" dur="3s" begin="0.8999999999999999s" repeatCount="indefinite"/>    </rect>
     <text x="125.0" y="472.0" text-anchor="middle" fill="#8da9c4" font-size="7.5" font-family="monospace">Apache Spark</text>
     <rect x="175.0" y="461.0" width="90" height="16" rx="6" ry="6" fill="#00D4FF" opacity="0.10" stroke="#00D4FF" stroke-width="0.5" stroke-opacity="0.3">      <animate attributeName="opacity" values="0.10;0.18;0.10" dur="3s" begin="0.96s" repeatCount="indefinite"/>    </rect>
-    <text x="220.0" y="472.0" text-anchor="middle" fill="#8da9c4" font-size="7.5" font-family="monospace">Xarray</text>
+    <text x="220.0" y="472.0" text-anchor="middle" fill="#8da9c4" font-size="7.5" font-family="monospace">PySpark</text>
     <rect x="270.0" y="461.0" width="90" height="16" rx="6" ry="6" fill="#00D4FF" opacity="0.10" stroke="#00D4FF" stroke-width="0.5" stroke-opacity="0.3">      <animate attributeName="opacity" values="0.10;0.18;0.10" dur="3s" begin="1.02s" repeatCount="indefinite"/>    </rect>
-    <text x="315.0" y="472.0" text-anchor="middle" fill="#8da9c4" font-size="7.5" font-family="monospace">Zarr</text>
+    <text x="315.0" y="472.0" text-anchor="middle" fill="#8da9c4" font-size="7.5" font-family="monospace">Xarray</text>
     <rect x="80.0" y="480.0" width="90" height="16" rx="6" ry="6" fill="#00D4FF" opacity="0.10" stroke="#00D4FF" stroke-width="0.5" stroke-opacity="0.3">      <animate attributeName="opacity" values="0.10;0.18;0.10" dur="3s" begin="1.0799999999999998s" repeatCount="indefinite"/>    </rect>
-    <text x="125.0" y="491.0" text-anchor="middle" fill="#8da9c4" font-size="7.5" font-family="monospace">Icechunk</text>
+    <text x="125.0" y="491.0" text-anchor="middle" fill="#8da9c4" font-size="7.5" font-family="monospace">Docker</text>
     <rect x="175.0" y="480.0" width="90" height="16" rx="6" ry="6" fill="#00D4FF" opacity="0.10" stroke="#00D4FF" stroke-width="0.5" stroke-opacity="0.3">      <animate attributeName="opacity" values="0.10;0.18;0.10" dur="3s" begin="1.14s" repeatCount="indefinite"/>    </rect>
-    <text x="220.0" y="491.0" text-anchor="middle" fill="#8da9c4" font-size="7.5" font-family="monospace">Docker</text>
+    <text x="220.0" y="491.0" text-anchor="middle" fill="#8da9c4" font-size="7.5" font-family="monospace">Git</text>
     <rect x="270.0" y="480.0" width="90" height="16" rx="6" ry="6" fill="#00D4FF" opacity="0.10" stroke="#00D4FF" stroke-width="0.5" stroke-opacity="0.3">      <animate attributeName="opacity" values="0.10;0.18;0.10" dur="3s" begin="1.2s" repeatCount="indefinite"/>    </rect>
-    <text x="315.0" y="491.0" text-anchor="middle" fill="#8da9c4" font-size="7.5" font-family="monospace">Git</text>
-    <rect x="80.0" y="499.0" width="90" height="16" rx="6" ry="6" fill="#00D4FF" opacity="0.10" stroke="#00D4FF" stroke-width="0.5" stroke-opacity="0.3">      <animate attributeName="opacity" values="0.10;0.18;0.10" dur="3s" begin="1.2599999999999998s" repeatCount="indefinite"/>    </rect>
-    <text x="125.0" y="510.0" text-anchor="middle" fill="#8da9c4" font-size="7.5" font-family="monospace">Azure DevOps</text>
-    <rect x="175.0" y="499.0" width="90" height="16" rx="6" ry="6" fill="#00D4FF" opacity="0.10" stroke="#00D4FF" stroke-width="0.5" stroke-opacity="0.3">      <animate attributeName="opacity" values="0.10;0.18;0.10" dur="3s" begin="1.3199999999999998s" repeatCount="indefinite"/>    </rect>
-    <text x="220.0" y="510.0" text-anchor="middle" fill="#8da9c4" font-size="7.5" font-family="monospace">Linux</text>
+    <text x="315.0" y="491.0" text-anchor="middle" fill="#8da9c4" font-size="7.5" font-family="monospace">Linux</text>
     <rect x="60.0" y="429.0" width="320" height="1.5" fill="#00D4FF" opacity="0.12"><animateTransform attributeName="transform" type="translate" from="0 0" to="0 95" dur="3.5s" begin="1.2s" repeatCount="indefinite"/></rect>
   </g>
 
@@ -352,13 +356,13 @@
     <text x="645.0" y="155.0" fill="#5a7088" font-size="8" font-family="monospace" text-anchor="middle" dominant-baseline="middle">(5)</text>
     <circle cx="768.0" cy="255.0" r="3" fill="#FF7A30" opacity="0.6">      <animate attributeName="opacity" values="0.4;1;0.4" dur="2.5s" begin="0.5s" repeatCount="indefinite"/>    </circle>
     <text x="768.0" y="265.0" fill="#FF7A30" font-size="9" font-family="monospace" text-anchor="middle" dominant-baseline="middle">Cloud &amp; Data Platforms</text>
-    <text x="768.0" y="278.0" fill="#5a7088" font-size="8" font-family="monospace" text-anchor="middle" dominant-baseline="middle">(3)</text>
+    <text x="768.0" y="278.0" fill="#5a7088" font-size="8" font-family="monospace" text-anchor="middle" dominant-baseline="middle">(7)</text>
     <circle cx="645.0" cy="378.0" r="3" fill="#29FF87" opacity="0.6">      <animate attributeName="opacity" values="0.4;1;0.4" dur="2.5s" begin="1.0s" repeatCount="indefinite"/>    </circle>
-    <text x="645.0" y="388.0" fill="#29FF87" font-size="9" font-family="monospace" text-anchor="middle" dominant-baseline="middle">Databases &amp; Modeling</text>
+    <text x="645.0" y="388.0" fill="#29FF87" font-size="9" font-family="monospace" text-anchor="middle" dominant-baseline="middle">Storage &amp; Modeling</text>
     <text x="645.0" y="401.0" fill="#5a7088" font-size="8" font-family="monospace" text-anchor="middle" dominant-baseline="middle">(6)</text>
     <circle cx="522.0" cy="255.0" r="3" fill="#00D4FF" opacity="0.6">      <animate attributeName="opacity" values="0.4;1;0.4" dur="2.5s" begin="1.5s" repeatCount="indefinite"/>    </circle>
     <text x="522.0" y="265.0" fill="#00D4FF" font-size="9" font-family="monospace" text-anchor="middle" dominant-baseline="middle">Big Data &amp; Ecosystem</text>
-    <text x="522.0" y="278.0" fill="#5a7088" font-size="8" font-family="monospace" text-anchor="middle" dominant-baseline="middle">(8)</text>
+    <text x="522.0" y="278.0" fill="#5a7088" font-size="8" font-family="monospace" text-anchor="middle" dominant-baseline="middle">(6)</text>
     <circle cx="645.0" cy="207.2" r="1.2" fill="#00E5FF" opacity="0.5">      <animate attributeName="opacity" values="0.2;0.8;0.2" dur="2s" begin="0.0s" repeatCount="indefinite"/>    </circle>
     <circle cx="695.0" cy="236.1" r="1.2" fill="#FF7A30" opacity="0.5">      <animate attributeName="opacity" values="0.2;0.8;0.2" dur="2s" begin="0.4s" repeatCount="indefinite"/>    </circle>
     <circle cx="695.0" cy="293.9" r="1.2" fill="#29FF87" opacity="0.5">      <animate attributeName="opacity" values="0.2;0.8;0.2" dur="2s" begin="0.8s" repeatCount="indefinite"/>    </circle>

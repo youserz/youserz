@@ -1,11 +1,19 @@
-<!-- DataStack Profile README Template
-     Customize this file with your own info, then rename it to README.md
-     in your GitHub profile repo (github.com/YOUR_USERNAME/YOUR_USERNAME).
-     The SVG paths below point to assets/generated/ which are auto-generated
-     by the GitHub Actions workflow or by running: python -m generator.main -->
-
 <div align="center">
   <img src="./assets/generated/dataflow-header.svg" width="850" alt="Data Flow Header"/>
+</div>
+
+<br/>
+
+<div align="center">
+  <code>DATA ENGINEERING</code> &nbsp;·&nbsp; <code>CLOUD</code> &nbsp;·&nbsp; <code>BIG DATA</code>
+  <br/><br/>
+  <strong>Dados que aguentam o mundo real.</strong>
+  <br/>
+  <sub>Do byte bruto à camada analítica — pipelines observáveis, cloud e sistemas de dados que sustentam decisões.</sub>
+  <br/><br/>
+  <a href="https://youserz.github.io/portifolio/">portfólio ↗</a>
+  &nbsp;·&nbsp;
+  <a href="https://youserz.github.io/portifolio/Curriculo2026.pdf">currículo ↗</a>
 </div>
 
 <br/>
@@ -42,12 +50,12 @@
 
 <div align="center">
   <a href="mailto:bernado.felix@estudante.ufla.br">
-    <img src="https://img.shields.io/badge/-Email-0b1120?style=for-the-badge&logo=gmail&logoColor=00c8a0" alt="Email"/>
+    <img src="https://img.shields.io/badge/-Email-11120f?style=for-the-badge&logo=gmail&logoColor=d8f85b" alt="Email"/>
   </a>
   <a href="https://www.linkedin.com/in/bernadodiniz/">
-    <img src="https://img.shields.io/badge/-LinkedIn-0b1120?style=for-the-badge&logo=linkedin&logoColor=ff6b35" alt="LinkedIn"/>
+    <img src="https://img.shields.io/badge/-LinkedIn-11120f?style=for-the-badge&logo=linkedin&logoColor=ff795c" alt="LinkedIn"/>
   </a>
   <a href="https://github.com/youserz">
-    <img src="https://img.shields.io/badge/-GitHub-0b1120?style=for-the-badge&logo=github&logoColor=2ecc71" alt="GitHub"/>
+    <img src="https://img.shields.io/badge/-GitHub-11120f?style=for-the-badge&logo=github&logoColor=91b7ff" alt="GitHub"/>
   </a>
 </div>

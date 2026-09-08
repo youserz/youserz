@@ -5,12 +5,12 @@ username: youserz
 
 profile:
   name: "Bernado Diniz"
-  tagline: "Data Engineer"
-  company: "Zetta/UFLA"
+  tagline: "Data Engineer · Cloud & Big Data"
+  company: "Zetta / UFLA"
   location: "Lavras, MG - Brazil"
   bio: |
-    Computer Science student at UFLA with strong focus on Data Engineering and Cloud Computing. Hands-on experience with AWS and Azure Databricks, building Big Data pipelines, incremental ingestion and data lake optimization.
-  philosophy: "Building scalable Data Lakehouse architectures with Spark, Delta Lake and Cloud Platforms"
+    Computer Science student at UFLA focused on Data Engineering and Cloud Computing. I build incremental Big Data pipelines, data lakes and multidimensional data systems with AWS, Azure Databricks, Spark and Python.
+  philosophy: "Engineering before dashboards: observable pipelines and data systems that hold up in the real world"
 
 social:
   email: "bernado.felix@estudante.ufla.br"
@@ -23,56 +23,58 @@ data_layers:
       - "Python"
       - "SQL"
       - "PySpark"
-      - "Java"
       - "C++"
+      - "Jupyter"
 
   - name: "Cloud & Data Platforms"
     color: "spark_orange"
     items:
-      - "Azure"
-      - "AWS"
+      - "AWS S3"
+      - "AWS Glue"
+      - "AWS Athena"
+      - "AWS Redshift"
+      - "Azure Data Lake"
       - "Databricks"
+      - "Unity Catalog"
 
-  - name: "Databases & Modeling"
+  - name: "Storage & Modeling"
     color: "lake_green"
     items:
-      - "PostgreSQL"
       - "Delta Lake"
-      - "Data Modeling"
-      - "Star Schema"
-      - "Snowflake Schema"
+      - "Zarr"
+      - "Icechunk"
+      - "Data Lakes"
+      - "Partitioning"
       - "SQL Optimization"
 
   - name: "Big Data & Ecosystem"
     color: "pipeline_teal"
     items:
       - "Apache Spark"
+      - "PySpark"
       - "Xarray"
-      - "Zarr"
-      - "Icechunk"
       - "Docker"
       - "Git"
-      - "Azure DevOps"
       - "Linux"
 
 projects:
-  - repo: "youserz/PB_Compass-DandA-AWS"
+  - repo: "youserz/era5-land-zarr-pipeline"
     layer: 0
+    category: "Data Engineering"
+    icon_type: "database"
+    description: "ERA5-Land pipeline from GRIB to Zarr for distributed cloud processing"
+
+  - repo: "youserz/PB_Compass-DandA-AWS"
+    layer: 1
     category: "Data Engineering"
     icon_type: "database"
     description: "AWS pipeline for ingestion, distributed processing and Data Lake architecture"
 
   - repo: "youserz/voice-chatgpt"
-    layer: 1
+    layer: 0
     category: "Artificial Intelligence"
     icon_type: "ai"
     description: "Multimodal assistant with Speech-to-Text, LLM and Text-to-Speech"
-
-  - repo: "youserz/projetoCompiladores"
-    layer: 2
-    category: "Computer Science"
-    icon_type: "terminal"
-    description: "Compiler with lexical, syntactic and semantic analysis"
 
 experience:
   - role: "Data Engineer Jr"
@@ -94,32 +96,38 @@ experience:
       - "IAM governance policies across the entire pipeline"
 
 certifications:
+  - name: "Bradesco - GenAI & Dados"
+    year: "2026"
+    issuer: "Fundação Bradesco"
   - name: "AWS Certified Cloud Practitioner"
     year: "2025"
     issuer: "AWS"
-  - name: "Cloud Economics & Technical Accredited"
+  - name: "AWS Cloud Quest: Cloud Practitioner"
     year: "2025"
-    issuer: "AWS Partner"
-  - name: "Sales Accredited"
-    year: "2025"
-    issuer: "AWS Partner"
+    issuer: "AWS"
   - name: "Cloud Economics Essentials"
     year: "2025"
     issuer: "AWS Partner"
-  - name: "GenAI & Dados"
-    year: "2026"
-    issuer: "Fundação Bradesco"
+  - name: "Sales Accreditation"
+    year: "2025"
+    issuer: "AWS Partner"
+  - name: "Technical Accredited"
+    year: "2025"
+    issuer: "AWS Partner"
+  - name: "Google Cybersecurity"
+    year: ""
+    issuer: "Google"
 
 theme:
-  depth: "#0b1120"
-  lake_surface: "#111d2e"
-  grid: "#1e3a5f"
-  pipeline_teal: "#00c8a0"
-  spark_orange: "#ff6b35"
-  lake_green: "#2ecc71"
-  text_bright: "#e6f1ff"
-  text_dim: "#8da9c4"
-  text_faint: "#4a6582"
+  depth: "#11120f"
+  lake_surface: "#181a16"
+  grid: "#34372e"
+  pipeline_teal: "#d8f85b"
+  spark_orange: "#ff795c"
+  lake_green: "#91b7ff"
+  text_bright: "#f2f0e8"
+  text_dim: "#a3a49a"
+  text_faint: "#64675d"
 
 stats:
   metrics:
