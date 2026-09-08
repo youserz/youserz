@@ -5,15 +5,16 @@
 <br/>
 
 <div align="center">
-  <code>DATA ENGINEERING</code> &nbsp;·&nbsp; <code>CLOUD</code> &nbsp;·&nbsp; <code>BIG DATA</code>
-  <br/><br/>
-  <strong>Dados que aguentam o mundo real.</strong>
-  <br/>
-  <sub>Do byte bruto à camada analítica — pipelines observáveis, cloud e sistemas de dados que sustentam decisões.</sub>
-  <br/><br/>
-  <a href="https://youserz.github.io/portifolio/">portfólio ↗</a>
-  &nbsp;·&nbsp;
-  <a href="https://youserz.github.io/portifolio/Curriculo2026.pdf">currículo ↗</a>
+  <img src="./assets/generated/profile-intro.svg" width="850" alt="Data Engineering Profile"/>
+</div>
+
+<div align="center">
+  <a href="https://youserz.github.io/portifolio/">
+    <img src="https://img.shields.io/badge/-Portfólio-11120f?style=for-the-badge&logoColor=d8f85b" alt="Portfólio"/>
+  </a>
+  <a href="https://youserz.github.io/portifolio/Curriculo2026.pdf">
+    <img src="https://img.shields.io/badge/-Currículo-11120f?style=for-the-badge&logoColor=ff795c" alt="Currículo"/>
+  </a>
 </div>
 
 <br/>

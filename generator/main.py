@@ -92,6 +92,7 @@ def generate(args):
 
     svgs = {
         "dataflow-header.svg": builder.render_dataflow_header(),
+        "profile-intro.svg": builder.render_profile_intro(),
         "stats-card.svg": builder.render_stats_card(),
         "tech-stack.svg": builder.render_tech_stack(),
         "projects-pipeline.svg": builder.render_projects_pipeline(),
@@ -105,7 +106,7 @@ def generate(args):
             f.write(content)
         logger.info("Wrote %s", path)
 
-    logger.info("Done! 6 SVGs generated.")
+    logger.info("Done! 7 SVGs generated.")
 
 
 def main():

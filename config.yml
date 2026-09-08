@@ -11,6 +11,12 @@ profile:
   bio: |
     Computer Science student at UFLA focused on Data Engineering and Cloud Computing. I build incremental Big Data pipelines, data lakes and multidimensional data systems with AWS, Azure Databricks, Spark and Python.
   philosophy: "Engineering before dashboards: observable pipelines and data systems that hold up in the real world"
+  headline: "Dados que aguentam o mundo real."
+  summary: "Do byte bruto à camada analítica — pipelines observáveis, cloud e sistemas de dados que sustentam decisões."
+  focus:
+    - "DATA ENGINEERING"
+    - "CLOUD"
+    - "BIG DATA"
 
 social:
   email: "bernado.felix@estudante.ufla.br"

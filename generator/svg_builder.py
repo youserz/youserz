@@ -2,6 +2,7 @@
 
 from generator.templates import (
     dataflow_header,
+    profile_intro,
     stats_card,
     tech_stack,
     projects_pipeline,
@@ -31,6 +32,12 @@ class SVGBuilder:
             theme=self.theme,
             data_layers=self.data_layers,
             projects=self.projects,
+        )
+
+    def render_profile_intro(self) -> str:
+        return profile_intro.render(
+            profile=self.config.get("profile", {}),
+            theme=self.theme,
         )
 
     def render_stats_card(self) -> str:
