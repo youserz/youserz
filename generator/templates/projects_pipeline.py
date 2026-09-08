@@ -1,8 +1,16 @@
-"""SVG template: Featured Systems — project cards with themed icons (850x220)."""
+"""SVG template: Featured Systems — project cards with themed icons (850x380)."""
 
 from generator.utils import wrap_text, deterministic_random, esc, resolve_layer_colors
 
-WIDTH, HEIGHT = 850, 220
+WIDTH, HEIGHT = 850, 380
+
+
+def _card_position(i, n, card_width, gap):
+    """Return x/y for a card in a compact one- or two-row grid."""
+    columns = n if n <= 2 else 3
+    column = i % columns
+    row = i // columns
+    return gap + column * (card_width + gap), 55 + row * 160
 
 
 def _build_project_icon(icon_type, cx, cy, color):
@@ -103,9 +111,9 @@ def _build_defs(n, card_width, gap, card_colors, theme):
 
     # Clip paths per card
     for i in range(n):
-        card_x = gap + i * (card_width + gap)
+        card_x, card_y = _card_position(i, n, card_width, gap)
         defs_parts.append(f'''    <clipPath id="card-clip-{i}">
-      <rect x="{card_x}" y="55" width="{card_width}" height="140" rx="8" ry="8"/>
+      <rect x="{card_x}" y="{card_y}" width="{card_width}" height="140" rx="8" ry="8"/>
     </clipPath>''')
 
     # CSS keyframes
@@ -191,11 +199,14 @@ def _build_connections(n, card_width, gap):
     """Build connection lines between cards."""
     conn_lines = []
     if n >= 2:
+        columns = n if n <= 2 else 3
         for i in range(n - 1):
-            x1 = gap + i * (card_width + gap) + card_width / 2
-            x2 = gap + (i + 1) * (card_width + gap) + card_width / 2
+            if i % columns == columns - 1:
+                continue
+            x1, y1 = _card_position(i, n, card_width, gap)
+            x2, y2 = _card_position(i + 1, n, card_width, gap)
             conn_lines.append(
-                f'  <line x1="{x1:.1f}" y1="85" x2="{x2:.1f}" y2="85" '
+                f'  <line x1="{x1 + card_width:.1f}" y1="{y1 + 70:.1f}" x2="{x2:.1f}" y2="{y2 + 70:.1f}" '
                 f'stroke="url(#conn-grad)" stroke-width="1" '
                 f'stroke-dasharray="6,4" opacity="0.5"/>'
             )
@@ -240,7 +251,7 @@ def _build_title_area(n, width, height, theme):
     return "\n".join(title_parts)
 
 
-def _build_project_card(i, proj, layer, color, card_width, card_x, theme):
+def _build_project_card(i, proj, layer, color, card_width, card_x, card_y, theme):
     """Build a single project card with themed icon."""
     card_cx = card_x + card_width / 2
     repo_name = proj["repo"].split("/")[-1] if "/" in proj["repo"] else proj["repo"]
@@ -258,23 +269,23 @@ def _build_project_card(i, proj, layer, color, card_width, card_x, theme):
 
     # Card container
     card_parts.append(
-        f'    <rect x="{card_x}" y="55" width="{card_width}" height="140" rx="8" ry="8" '
+        f'    <rect x="{card_x}" y="{card_y}" width="{card_width}" height="140" rx="8" ry="8" '
         f'fill="url(#card-bg-{i})" stroke="{theme["grid"]}" stroke-width="1"/>'
     )
 
     # Nebula wisps (clipped inside card)
     card_parts.append(f'    <g clip-path="url(#card-clip-{i})">')
     card_parts.append(
-        f'      <circle cx="{card_x + card_width * 0.3}" cy="90" r="50" '
+        f'      <circle cx="{card_x + card_width * 0.3}" cy="{card_y + 35}" r="50" '
         f'fill="{color}" opacity="0.025" filter="url(#card-nebula)"/>'
     )
     card_parts.append(
-        f'      <circle cx="{card_x + card_width * 0.7}" cy="150" r="40" '
+        f'      <circle cx="{card_x + card_width * 0.7}" cy="{card_y + 95}" r="40" '
         f'fill="{color}" opacity="0.03" filter="url(#card-nebula)"/>'
     )
     # Scan line inside card
     card_parts.append(
-        f'      <rect x="{card_x}" y="55" width="{card_width}" height="2" '
+        f'      <rect x="{card_x}" y="{card_y}" width="{card_width}" height="2" '
         f'fill="{color}" opacity="0.1">'
         f'<animateTransform attributeName="transform" type="translate" '
         f'from="0 0" to="0 140" dur="6s" repeatCount="indefinite"/>'
@@ -284,25 +295,25 @@ def _build_project_card(i, proj, layer, color, card_width, card_x, theme):
 
     # Glow halo behind icon
     card_parts.append(
-        f'    <circle cx="{card_cx}" cy="85" r="10" fill="{color}" '
+        f'    <circle cx="{card_cx}" cy="{card_y + 30}" r="10" fill="{color}" '
         f'opacity="0.10" filter="url(#proj-glow-{i})"/>'
     )
 
     # Themed project icon
-    icon_lines = _build_project_icon(icon_type, card_cx, 85, color)
+    icon_lines = _build_project_icon(icon_type, card_cx, card_y + 30, color)
     for line in icon_lines:
         card_parts.append(line)
 
     # Project name (centered)
     card_parts.append(
-        f'    <text x="{card_cx}" y="111" fill="{theme["text_bright"]}" '
+        f'    <text x="{card_cx}" y="{card_y + 56}" fill="{theme["text_bright"]}" '
         f'font-size="14" font-weight="bold" font-family="sans-serif" '
         f'text-anchor="middle">{esc(repo_name)}</text>'
     )
 
     # Description lines (centered)
     for j, line in enumerate(desc_lines[:2]):
-        y_pos = 129 + j * 15
+        y_pos = card_y + 74 + j * 15
         card_parts.append(
             f'    <text x="{card_cx}" y="{y_pos}" fill="{theme["text_dim"]}" '
             f'font-size="11" font-family="sans-serif" '
@@ -314,11 +325,11 @@ def _build_project_card(i, proj, layer, color, card_width, card_x, theme):
     tag_width = len(tag_text) * 7 + 16
     tag_x = card_cx - tag_width / 2
     card_parts.append(
-        f'    <rect x="{tag_x}" y="163" width="{tag_width}" height="18" rx="9" ry="9" '
+        f'    <rect x="{tag_x}" y="{card_y + 108}" width="{tag_width}" height="18" rx="9" ry="9" '
         f'fill="{color}" opacity="0.12"/>'
     )
     card_parts.append(
-        f'    <text x="{card_cx}" y="175" fill="{color}" '
+        f'    <text x="{card_cx}" y="{card_y + 120}" fill="{color}" '
         f'font-size="9" font-family="monospace" text-anchor="middle" '
         f'opacity="0.85">{esc(tag_text)}</text>'
     )
@@ -327,14 +338,14 @@ def _build_project_card(i, proj, layer, color, card_width, card_x, theme):
     return "\n".join(card_parts)
 
 
-def _build_scan_line(width, theme):
+def _build_scan_line(width, height, theme):
     """Build the global scan line."""
     cyan = theme.get("pipeline_teal", "#d8f85b")
     return (
         f'  <rect x="12" y="50" width="{width - 24}" height="1.5" '
         f'fill="{cyan}" opacity="0.08">'
         f'<animateTransform attributeName="transform" type="translate" '
-        f'from="0 0" to="0 160" dur="6s" repeatCount="indefinite"/>'
+        f'from="0 0" to="0 {height - 60}" dur="6s" repeatCount="indefinite"/>'
         f'</rect>'
     )
 
@@ -349,7 +360,7 @@ def render(projects: list, data_layers: list, theme: dict) -> str:
     """
     all_layer_colors = resolve_layer_colors(data_layers, theme)
 
-    n = min(len(projects), 3)
+    n = min(len(projects), 6)
 
     if n == 0:
         # No projects — render an empty card
@@ -365,8 +376,9 @@ def render(projects: list, data_layers: list, theme: dict) -> str:
         card_width = 340
     else:
         card_width = 240
-    total_cards_width = card_width * n
-    gap = (WIDTH - total_cards_width) / (n + 1)
+    columns = n if n <= 2 else 3
+    total_cards_width = card_width * columns
+    gap = (WIDTH - total_cards_width) / (columns + 1)
 
     # Resolve layer indices and colors per card
     card_layers = []
@@ -408,14 +420,14 @@ def render(projects: list, data_layers: list, theme: dict) -> str:
         proj = projects[i]
         layer = data_layers[card_layers[i]]
         color = card_colors[i]
-        card_x = gap + i * (card_width + gap)
+        card_x, card_y = _card_position(i, n, card_width, gap)
 
-        cards.append(_build_project_card(i, proj, layer, color, card_width, card_x, theme))
+        cards.append(_build_project_card(i, proj, layer, color, card_width, card_x, card_y, theme))
 
     cards_str = "\n".join(cards)
 
     # ── Layer 7: Global scan line ──
-    scan_line = _build_scan_line(WIDTH, theme)
+    scan_line = _build_scan_line(WIDTH, HEIGHT, theme)
 
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{HEIGHT}" viewBox="0 0 {WIDTH} {HEIGHT}">
   <defs>
