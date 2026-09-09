@@ -20,47 +20,46 @@ def _months_since(date_text: str) -> str:
 
 
 def _ascii_art(theme: dict) -> str:
-    """Render an extruded 3D data gear from ASCII characters."""
+    """Render the user-provided Unicode terminal art."""
     acid = theme["pipeline_teal"]
     coral = theme["spark_orange"]
     blue = theme["lake_green"]
     dim = theme["text_dim"]
     bright = theme["text_bright"]
 
-    lines = [
-        ("                    ___[###]___", coral),
-        ("                _.-'           '-._", bright),
-        ("            _.-'    .-------.      '-._", dim),
-        (r"        ___/___    /    (O)  \     ___\___", acid),
-        (r"       /  /   \___/      |      \___/   \  \_", bright),
-        (r"  ____/__/       |   (O)--+--(O)  |       \__\____", coral),
-        (r" [###]          |     \  |  /     |          [###]", acid),
-        (r" /   |          |      \(O)/      |          |   \_", bright),
-        (r"[    |          |       /|\       |          |    ]", blue),
-        ("|    |          |    (O)-+-(O)    |          |    |", acid),
-        (r"[    |           \       |       /           |    ]", bright),
-        (r" \   |     ___    '------|------'    ___    |   /", dim),
-        (r"  [###]___/   \___       |      ___/   \___[###]", coral),
-        (r"      \  \       '-._____|___.-'       /  /", bright),
-        (r"       \__\______               _______/__/", blue),
-        (r"            \    '-------------'       /", dim),
-        (r"             \\\\\\\\\\\\\\\\\_", blue),
-        (r"              \_____________________\_", bright),
-        ("                 '---[#####]---'", coral),
-        ("", dim),
-        ("                 3D DATA GEAR", acid),
-        ("        ingest / process / govern / serve", dim),
-        ("", dim),
-        ("              nodes: 06 / links: 08", blue),
-        ("              pipeline status: ONLINE", acid),
+    art_lines = [
+        "⠀⠀⠀⠀⠀⢠⠖⠀⡜⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢱⡀⠈⣄⠀⠀⠀⠀⠀",
+        "⠀⠀⠀⠀⢠⡟⠀⣸⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢷⡀⠸⣆⠀⠀⠀⠀",
+        "⠀⠀⠀⢠⡿⠀⢰⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣧⠀⢹⣇⠀⠀⠀",
+        "⠀⠀⠀⣸⡇⠀⣼⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⡄⠀⣿⡀⠀⠀",
+        "⠀⠀⢠⣿⠀⢸⣿⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣧⠀⢹⡇⠀⠀",
+        "⠀⠀⣸⣿⠀⠘⢿⠿⠶⢶⣻⢿⣦⣠⣦⢠⣤⣠⡿⢛⡿⠷⠿⢿⠟⠀⢸⣿⡀⠀",
+        "⠀⠠⣿⣧⣤⣤⣴⡶⠿⠿⠛⠻⣿⣿⣿⣿⣿⣿⠾⠿⠿⠿⠷⣶⣤⣤⣼⣿⡇⠀",
+        "⠀⠀⠈⠛⠛⠉⠀⢀⣴⡿⠛⣻⣿⣿⣿⣿⣿⣿⣟⠛⠻⣷⣄⠀⠀⠉⠛⠏⠀⠀",
+        "⠀⠀⠀⠀⠀⣠⣶⠟⢉⣤⣾⡿⣹⣿⣿⣿⣿⣷⠻⢷⣦⡌⠻⣷⣄⡀⠀⠀⠀⠀",
+        "⠀⠀⣀⣴⡾⠏⠁⠀⢠⣿⣏⠀⢹⣿⣿⣿⣿⣿⠀⢸⣿⡇⠀⠀⠙⢿⣦⣄⠀⠀",
+        "⢸⣿⡟⠉⠀⠀⠀⠀⠰⣿⡗⠀⠈⣿⣿⣿⣿⡏⠀⢸⣿⡇⠀⠀⠀⠀⠈⠹⣿⣿",
+        "⢸⣿⡇⠀⠀⠀⠀⠀⢘⣿⡇⠀⠀⢹⣿⣿⣿⠀⠀⠘⣿⡇⠀⠀⠀⠀⠀⠀⣿⡏",
+        "⠈⣿⡇⠀⠀⠀⠀⠀⢨⣿⡇⠀⠀⠀⢿⣿⠇⠀⠀⠀⣿⡇⠀⠀⠀⠀⠀⠀⣿⡇",
+        "⠀⢻⣷⠀⠀⠀⠀⠀⠀⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⡇⠀⠀⠀⠀⠀⢸⣿⠃",
+        "⠀⠸⣿⠀⠀⠀⠀⠀⠀⢿⡧⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⠀⠀⠀⠀⠀⠀⢸⡏⠀",
+        "⠀⠀⢹⡆⠀⠀⠀⠀⠀⢸⡗⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⠀⠀⠀⠀⠀⠀⣿⠁⠀",
+        "⠀⠀⠈⢧⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⣸⡇⠀⠀⠀⠀⠀⢸⠇⠀⠀",
+        "⠀⠀⠀⠘⠆⠀⠀⠀⠀⠀⢹⡆⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⢀⠎⠀⠀⠀",
+        "⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⢷⠀⠀⠀⠀⠀⠀⢰⠃⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀",
+        "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢆⠀⠀⠀⠀⢀⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
+        "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠞⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
     ]
+    palette = [blue] * 5 + [acid] * 5 + [coral] * 5 + [bright] * 3 + [dim] * 3
+    lines = list(zip(art_lines, palette))
 
     rendered = []
     for index, (line, color) in enumerate(lines):
-        y = 85 + index * 16.0
+        y = 74 + index * 19.0
         rendered.append(
-            f'  <text x="10" y="{y:.1f}" fill="{color}" font-size="10.4" '
-            f'font-family="Consolas, Courier New, monospace" xml:space="preserve">{esc(line)}</text>'
+            f'  <text x="26" y="{y:.1f}" fill="{color}" font-size="14" '
+            f'font-family="DejaVu Sans Mono, Noto Sans Symbols2, Segoe UI Symbol, monospace" '
+            f'xml:space="preserve">{esc(line)}</text>'
         )
 
     return "\n".join(rendered)

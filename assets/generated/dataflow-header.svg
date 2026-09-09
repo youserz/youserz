@@ -23,31 +23,27 @@
 
   <!-- ASCII side -->
   <g filter="url(#soft-glow)">
-  <text x="10" y="85.0" fill="#ff795c" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">                    ___[###]___</text>
-  <text x="10" y="101.0" fill="#f2f0e8" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">                _.-&apos;           &apos;-._</text>
-  <text x="10" y="117.0" fill="#a3a49a" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">            _.-&apos;    .-------.      &apos;-._</text>
-  <text x="10" y="133.0" fill="#d8f85b" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">        ___/___    /    (O)  \     ___\___</text>
-  <text x="10" y="149.0" fill="#f2f0e8" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">       /  /   \___/      |      \___/   \  \_</text>
-  <text x="10" y="165.0" fill="#ff795c" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">  ____/__/       |   (O)--+--(O)  |       \__\____</text>
-  <text x="10" y="181.0" fill="#d8f85b" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve"> [###]          |     \  |  /     |          [###]</text>
-  <text x="10" y="197.0" fill="#f2f0e8" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve"> /   |          |      \(O)/      |          |   \_</text>
-  <text x="10" y="213.0" fill="#91b7ff" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">[    |          |       /|\       |          |    ]</text>
-  <text x="10" y="229.0" fill="#d8f85b" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">|    |          |    (O)-+-(O)    |          |    |</text>
-  <text x="10" y="245.0" fill="#f2f0e8" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">[    |           \       |       /           |    ]</text>
-  <text x="10" y="261.0" fill="#a3a49a" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve"> \   |     ___    &apos;------|------&apos;    ___    |   /</text>
-  <text x="10" y="277.0" fill="#ff795c" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">  [###]___/   \___       |      ___/   \___[###]</text>
-  <text x="10" y="293.0" fill="#f2f0e8" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">      \  \       &apos;-._____|___.-&apos;       /  /</text>
-  <text x="10" y="309.0" fill="#91b7ff" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">       \__\______               _______/__/</text>
-  <text x="10" y="325.0" fill="#a3a49a" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">            \    &apos;-------------&apos;       /</text>
-  <text x="10" y="341.0" fill="#91b7ff" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">             \\\\\\\\\\\\\\\\\_</text>
-  <text x="10" y="357.0" fill="#f2f0e8" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">              \_____________________\_</text>
-  <text x="10" y="373.0" fill="#ff795c" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">                 &apos;---[#####]---&apos;</text>
-  <text x="10" y="389.0" fill="#a3a49a" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve"></text>
-  <text x="10" y="405.0" fill="#d8f85b" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">                 3D DATA GEAR</text>
-  <text x="10" y="421.0" fill="#a3a49a" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">        ingest / process / govern / serve</text>
-  <text x="10" y="437.0" fill="#a3a49a" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve"></text>
-  <text x="10" y="453.0" fill="#91b7ff" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">              nodes: 06 / links: 08</text>
-  <text x="10" y="469.0" fill="#d8f85b" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">              pipeline status: ONLINE</text>
+  <text x="26" y="74.0" fill="#91b7ff" font-size="14" font-family="DejaVu Sans Mono, Noto Sans Symbols2, Segoe UI Symbol, monospace" xml:space="preserve">⠀⠀⠀⠀⠀⢠⠖⠀⡜⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢱⡀⠈⣄⠀⠀⠀⠀⠀</text>
+  <text x="26" y="93.0" fill="#91b7ff" font-size="14" font-family="DejaVu Sans Mono, Noto Sans Symbols2, Segoe UI Symbol, monospace" xml:space="preserve">⠀⠀⠀⠀⢠⡟⠀⣸⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢷⡀⠸⣆⠀⠀⠀⠀</text>
+  <text x="26" y="112.0" fill="#91b7ff" font-size="14" font-family="DejaVu Sans Mono, Noto Sans Symbols2, Segoe UI Symbol, monospace" xml:space="preserve">⠀⠀⠀⢠⡿⠀⢰⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣧⠀⢹⣇⠀⠀⠀</text>
+  <text x="26" y="131.0" fill="#91b7ff" font-size="14" font-family="DejaVu Sans Mono, Noto Sans Symbols2, Segoe UI Symbol, monospace" xml:space="preserve">⠀⠀⠀⣸⡇⠀⣼⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⡄⠀⣿⡀⠀⠀</text>
+  <text x="26" y="150.0" fill="#91b7ff" font-size="14" font-family="DejaVu Sans Mono, Noto Sans Symbols2, Segoe UI Symbol, monospace" xml:space="preserve">⠀⠀⢠⣿⠀⢸⣿⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣧⠀⢹⡇⠀⠀</text>
+  <text x="26" y="169.0" fill="#d8f85b" font-size="14" font-family="DejaVu Sans Mono, Noto Sans Symbols2, Segoe UI Symbol, monospace" xml:space="preserve">⠀⠀⣸⣿⠀⠘⢿⠿⠶⢶⣻⢿⣦⣠⣦⢠⣤⣠⡿⢛⡿⠷⠿⢿⠟⠀⢸⣿⡀⠀</text>
+  <text x="26" y="188.0" fill="#d8f85b" font-size="14" font-family="DejaVu Sans Mono, Noto Sans Symbols2, Segoe UI Symbol, monospace" xml:space="preserve">⠀⠠⣿⣧⣤⣤⣴⡶⠿⠿⠛⠻⣿⣿⣿⣿⣿⣿⠾⠿⠿⠿⠷⣶⣤⣤⣼⣿⡇⠀</text>
+  <text x="26" y="207.0" fill="#d8f85b" font-size="14" font-family="DejaVu Sans Mono, Noto Sans Symbols2, Segoe UI Symbol, monospace" xml:space="preserve">⠀⠀⠈⠛⠛⠉⠀⢀⣴⡿⠛⣻⣿⣿⣿⣿⣿⣿⣟⠛⠻⣷⣄⠀⠀⠉⠛⠏⠀⠀</text>
+  <text x="26" y="226.0" fill="#d8f85b" font-size="14" font-family="DejaVu Sans Mono, Noto Sans Symbols2, Segoe UI Symbol, monospace" xml:space="preserve">⠀⠀⠀⠀⠀⣠⣶⠟⢉⣤⣾⡿⣹⣿⣿⣿⣿⣷⠻⢷⣦⡌⠻⣷⣄⡀⠀⠀⠀⠀</text>
+  <text x="26" y="245.0" fill="#d8f85b" font-size="14" font-family="DejaVu Sans Mono, Noto Sans Symbols2, Segoe UI Symbol, monospace" xml:space="preserve">⠀⠀⣀⣴⡾⠏⠁⠀⢠⣿⣏⠀⢹⣿⣿⣿⣿⣿⠀⢸⣿⡇⠀⠀⠙⢿⣦⣄⠀⠀</text>
+  <text x="26" y="264.0" fill="#ff795c" font-size="14" font-family="DejaVu Sans Mono, Noto Sans Symbols2, Segoe UI Symbol, monospace" xml:space="preserve">⢸⣿⡟⠉⠀⠀⠀⠀⠰⣿⡗⠀⠈⣿⣿⣿⣿⡏⠀⢸⣿⡇⠀⠀⠀⠀⠈⠹⣿⣿</text>
+  <text x="26" y="283.0" fill="#ff795c" font-size="14" font-family="DejaVu Sans Mono, Noto Sans Symbols2, Segoe UI Symbol, monospace" xml:space="preserve">⢸⣿⡇⠀⠀⠀⠀⠀⢘⣿⡇⠀⠀⢹⣿⣿⣿⠀⠀⠘⣿⡇⠀⠀⠀⠀⠀⠀⣿⡏</text>
+  <text x="26" y="302.0" fill="#ff795c" font-size="14" font-family="DejaVu Sans Mono, Noto Sans Symbols2, Segoe UI Symbol, monospace" xml:space="preserve">⠈⣿⡇⠀⠀⠀⠀⠀⢨⣿⡇⠀⠀⠀⢿⣿⠇⠀⠀⠀⣿⡇⠀⠀⠀⠀⠀⠀⣿⡇</text>
+  <text x="26" y="321.0" fill="#ff795c" font-size="14" font-family="DejaVu Sans Mono, Noto Sans Symbols2, Segoe UI Symbol, monospace" xml:space="preserve">⠀⢻⣷⠀⠀⠀⠀⠀⠀⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⡇⠀⠀⠀⠀⠀⢸⣿⠃</text>
+  <text x="26" y="340.0" fill="#ff795c" font-size="14" font-family="DejaVu Sans Mono, Noto Sans Symbols2, Segoe UI Symbol, monospace" xml:space="preserve">⠀⠸⣿⠀⠀⠀⠀⠀⠀⢿⡧⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⠀⠀⠀⠀⠀⠀⢸⡏⠀</text>
+  <text x="26" y="359.0" fill="#f2f0e8" font-size="14" font-family="DejaVu Sans Mono, Noto Sans Symbols2, Segoe UI Symbol, monospace" xml:space="preserve">⠀⠀⢹⡆⠀⠀⠀⠀⠀⢸⡗⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⠀⠀⠀⠀⠀⠀⣿⠁⠀</text>
+  <text x="26" y="378.0" fill="#f2f0e8" font-size="14" font-family="DejaVu Sans Mono, Noto Sans Symbols2, Segoe UI Symbol, monospace" xml:space="preserve">⠀⠀⠈⢧⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⣸⡇⠀⠀⠀⠀⠀⢸⠇⠀⠀</text>
+  <text x="26" y="397.0" fill="#f2f0e8" font-size="14" font-family="DejaVu Sans Mono, Noto Sans Symbols2, Segoe UI Symbol, monospace" xml:space="preserve">⠀⠀⠀⠘⠆⠀⠀⠀⠀⠀⢹⡆⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⢀⠎⠀⠀⠀</text>
+  <text x="26" y="416.0" fill="#a3a49a" font-size="14" font-family="DejaVu Sans Mono, Noto Sans Symbols2, Segoe UI Symbol, monospace" xml:space="preserve">⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⢷⠀⠀⠀⠀⠀⠀⢰⠃⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀</text>
+  <text x="26" y="435.0" fill="#a3a49a" font-size="14" font-family="DejaVu Sans Mono, Noto Sans Symbols2, Segoe UI Symbol, monospace" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢆⠀⠀⠀⠀⢀⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+  <text x="26" y="454.0" fill="#a3a49a" font-size="14" font-family="DejaVu Sans Mono, Noto Sans Symbols2, Segoe UI Symbol, monospace" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠞⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
   </g>
   <text x="22" y="496" fill="#64675d" font-size="9" font-family="Consolas, Courier New, monospace">[data flows down / decisions flow up]</text>
 
