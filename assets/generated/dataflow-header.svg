@@ -23,42 +23,31 @@
 
   <!-- ASCII side -->
   <g filter="url(#soft-glow)">
-  <text x="22" y="58.0" fill="#d8f85b" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">                +-------------------+</text>
-  <text x="22" y="70.1" fill="#d8f85b" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">               /                   /|</text>
-  <text x="22" y="82.2" fill="#d8f85b" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">              /      INGEST       / |</text>
-  <text x="22" y="94.3" fill="#d8f85b" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">             +-------------------+  |</text>
-  <text x="22" y="106.4" fill="#d8f85b" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">             |  o   o   o   o    |  |</text>
-  <text x="22" y="118.5" fill="#d8f85b" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">             |        |          | /</text>
-  <text x="22" y="130.6" fill="#d8f85b" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">             |        v          |/</text>
-  <text x="22" y="142.7" fill="#d8f85b" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">             +-------------------+</text>
-  <text x="22" y="154.8" fill="#a3a49a" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">                       :</text>
-  <text x="22" y="166.9" fill="#a3a49a" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">                       v</text>
-  <text x="22" y="179.0" fill="#ff795c" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">          +------------------------+</text>
-  <text x="22" y="191.1" fill="#ff795c" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">         /                        /|</text>
-  <text x="22" y="203.2" fill="#ff795c" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">        /       TRANSFORM        / |</text>
-  <text x="22" y="215.3" fill="#ff795c" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">       +------------------------+  |</text>
-  <text x="22" y="227.4" fill="#ff795c" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">       |   &gt;&gt;&gt;   PYSPARK   &gt;&gt;&gt;  |  |</text>
-  <text x="22" y="239.5" fill="#ff795c" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">       |    CLEAN / ENRICH      | /</text>
-  <text x="22" y="251.6" fill="#ff795c" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">       |          v             |/</text>
-  <text x="22" y="263.7" fill="#ff795c" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">       +------------------------+</text>
-  <text x="22" y="275.8" fill="#a3a49a" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">                    :</text>
-  <text x="22" y="287.9" fill="#a3a49a" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">                    v</text>
-  <text x="22" y="300.0" fill="#91b7ff" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">             +---------------------+</text>
-  <text x="22" y="312.1" fill="#91b7ff" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">            /                     /|</text>
-  <text x="22" y="324.2" fill="#91b7ff" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">           /      LAKEHOUSE      / |</text>
-  <text x="22" y="336.3" fill="#91b7ff" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">          +---------------------+  |</text>
-  <text x="22" y="348.4" fill="#91b7ff" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">          |  RAW   |  TRUSTED   |  |</text>
-  <text x="22" y="360.5" fill="#91b7ff" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">          |  DELTA |  ICECHUNK  | /</text>
-  <text x="22" y="372.6" fill="#91b7ff" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">          |         v           |/</text>
-  <text x="22" y="384.7" fill="#91b7ff" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">          +---------------------+</text>
-  <text x="22" y="396.8" fill="#a3a49a" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">                       :</text>
-  <text x="22" y="408.9" fill="#a3a49a" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">                       v</text>
-  <text x="22" y="421.0" fill="#d8f85b" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">                  +-------------+</text>
-  <text x="22" y="433.1" fill="#d8f85b" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">                 /             /|</text>
-  <text x="22" y="445.2" fill="#d8f85b" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">                /    SERVE    / |</text>
-  <text x="22" y="457.3" fill="#d8f85b" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">               +-------------+  |</text>
-  <text x="22" y="469.4" fill="#d8f85b" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">               |  ANALYTICS  | /</text>
-  <text x="22" y="481.5" fill="#d8f85b" font-size="10.4" font-family="Consolas, Courier New, monospace" xml:space="preserve">               +-------------+</text>
+  <text x="18" y="78.0" fill="#a3a49a" font-size="10.2" font-family="Consolas, Courier New, monospace" xml:space="preserve">                  .----[ ]----.</text>
+  <text x="18" y="93.2" fill="#f2f0e8" font-size="10.2" font-family="Consolas, Courier New, monospace" xml:space="preserve">               .-&apos;             &apos;-.</text>
+  <text x="18" y="108.4" fill="#d8f85b" font-size="10.2" font-family="Consolas, Courier New, monospace" xml:space="preserve">         _____/        (O)        \_____</text>
+  <text x="18" y="123.6" fill="#f2f0e8" font-size="10.2" font-family="Consolas, Courier New, monospace" xml:space="preserve">       _/               |               \_</text>
+  <text x="18" y="138.8" fill="#a3a49a" font-size="10.2" font-family="Consolas, Courier New, monospace" xml:space="preserve">      /     ____         |         ____    \</text>
+  <text x="18" y="154.0" fill="#ff795c" font-size="10.2" font-family="Consolas, Courier New, monospace" xml:space="preserve"> [===]    .&apos;    &apos;.       |       .&apos;    &apos;.  [===]</text>
+  <text x="18" y="169.2" fill="#d8f85b" font-size="10.2" font-family="Consolas, Courier New, monospace" xml:space="preserve">    |    /      (O)------+------(O)      \    |</text>
+  <text x="18" y="184.4" fill="#f2f0e8" font-size="10.2" font-family="Consolas, Courier New, monospace" xml:space="preserve">    |   |          \     |     /          |   |</text>
+  <text x="18" y="199.6" fill="#91b7ff" font-size="10.2" font-family="Consolas, Courier New, monospace" xml:space="preserve">    |   |           \   (O)   /           |   |</text>
+  <text x="18" y="214.8" fill="#ff795c" font-size="10.2" font-family="Consolas, Courier New, monospace" xml:space="preserve">[===]   |            \  /|\  /            |  [===]</text>
+  <text x="18" y="230.0" fill="#f2f0e8" font-size="10.2" font-family="Consolas, Courier New, monospace" xml:space="preserve">    |   |             \/ | \/             |   |</text>
+  <text x="18" y="245.2" fill="#d8f85b" font-size="10.2" font-family="Consolas, Courier New, monospace" xml:space="preserve">    |   |          (O)---+---(O)          |   |</text>
+  <text x="18" y="260.4" fill="#f2f0e8" font-size="10.2" font-family="Consolas, Courier New, monospace" xml:space="preserve">    |    \             / \             /    |</text>
+  <text x="18" y="275.6" fill="#91b7ff" font-size="10.2" font-family="Consolas, Courier New, monospace" xml:space="preserve"> [===]    &apos;.___        /   \        __.&apos;   [===]</text>
+  <text x="18" y="290.8" fill="#a3a49a" font-size="10.2" font-family="Consolas, Courier New, monospace" xml:space="preserve">      \        &apos;-.    /     \    .-&apos;       /</text>
+  <text x="18" y="306.0" fill="#f2f0e8" font-size="10.2" font-family="Consolas, Courier New, monospace" xml:space="preserve">       \_          &apos;---. .---&apos;          _/</text>
+  <text x="18" y="321.2" fill="#d8f85b" font-size="10.2" font-family="Consolas, Courier New, monospace" xml:space="preserve">         &apos;---.___       |       ___.---&apos;</text>
+  <text x="18" y="336.4" fill="#ff795c" font-size="10.2" font-family="Consolas, Courier New, monospace" xml:space="preserve">                &apos;---. [===] .---&apos;</text>
+  <text x="18" y="351.6" fill="#f2f0e8" font-size="10.2" font-family="Consolas, Courier New, monospace" xml:space="preserve">                     &apos;-----&apos;</text>
+  <text x="18" y="366.8" fill="#a3a49a" font-size="10.2" font-family="Consolas, Courier New, monospace" xml:space="preserve"></text>
+  <text x="18" y="382.0" fill="#d8f85b" font-size="10.2" font-family="Consolas, Courier New, monospace" xml:space="preserve">              DATA ENGINEERING</text>
+  <text x="18" y="397.2" fill="#a3a49a" font-size="10.2" font-family="Consolas, Courier New, monospace" xml:space="preserve">       ingest / transform / govern / serve</text>
+  <text x="18" y="412.4" fill="#a3a49a" font-size="10.2" font-family="Consolas, Courier New, monospace" xml:space="preserve"></text>
+  <text x="18" y="427.6" fill="#91b7ff" font-size="10.2" font-family="Consolas, Courier New, monospace" xml:space="preserve">              nodes: 06 / links: 08</text>
+  <text x="18" y="442.8" fill="#d8f85b" font-size="10.2" font-family="Consolas, Courier New, monospace" xml:space="preserve">              pipeline status: ONLINE</text>
   </g>
   <text x="22" y="496" fill="#64675d" font-size="9" font-family="Consolas, Courier New, monospace">[data flows down / decisions flow up]</text>
 

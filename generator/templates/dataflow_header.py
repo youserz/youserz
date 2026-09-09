@@ -20,56 +20,46 @@ def _months_since(date_text: str) -> str:
 
 
 def _ascii_art(theme: dict) -> str:
-    """Render stacked data cubes exclusively from ASCII characters."""
+    """Render a data-engineering gear and network from ASCII characters."""
     acid = theme["pipeline_teal"]
     coral = theme["spark_orange"]
     blue = theme["lake_green"]
     dim = theme["text_dim"]
+    bright = theme["text_bright"]
 
     lines = [
-        ("                +-------------------+", acid),
-        ("               /                   /|", acid),
-        ("              /      INGEST       / |", acid),
-        ("             +-------------------+  |", acid),
-        ("             |  o   o   o   o    |  |", acid),
-        ("             |        |          | /", acid),
-        ("             |        v          |/", acid),
-        ("             +-------------------+", acid),
-        ("                       :", dim),
-        ("                       v", dim),
-        ("          +------------------------+", coral),
-        ("         /                        /|", coral),
-        ("        /       TRANSFORM        / |", coral),
-        ("       +------------------------+  |", coral),
-        ("       |   >>>   PYSPARK   >>>  |  |", coral),
-        ("       |    CLEAN / ENRICH      | /", coral),
-        ("       |          v             |/", coral),
-        ("       +------------------------+", coral),
-        ("                    :", dim),
-        ("                    v", dim),
-        ("             +---------------------+", blue),
-        ("            /                     /|", blue),
-        ("           /      LAKEHOUSE      / |", blue),
-        ("          +---------------------+  |", blue),
-        ("          |  RAW   |  TRUSTED   |  |", blue),
-        ("          |  DELTA |  ICECHUNK  | /", blue),
-        ("          |         v           |/", blue),
-        ("          +---------------------+", blue),
-        ("                       :", dim),
-        ("                       v", dim),
-        ("                  +-------------+", acid),
-        ("                 /             /|", acid),
-        ("                /    SERVE    / |", acid),
-        ("               +-------------+  |", acid),
-        ("               |  ANALYTICS  | /", acid),
-        ("               +-------------+", acid),
+        ("                  .----[ ]----.", dim),
+        ("               .-'             '-.", bright),
+        (r"         _____/        (O)        \_____", acid),
+        (r"       _/               |               \_", bright),
+        ("      /     ____         |         ____    \\" , dim),
+        (" [===]    .'    '.       |       .'    '.  [===]", coral),
+        (r"    |    /      (O)------+------(O)      \    |", acid),
+        (r"    |   |          \     |     /          |   |", bright),
+        (r"    |   |           \   (O)   /           |   |", blue),
+        (r"[===]   |            \  /|\  /            |  [===]", coral),
+        (r"    |   |             \/ | \/             |   |", bright),
+        ("    |   |          (O)---+---(O)          |   |", acid),
+        (r"    |    \             / \             /    |", bright),
+        (r" [===]    '.___        /   \        __.'   [===]", blue),
+        (r"      \        '-.    /     \    .-'       /", dim),
+        (r"       \_          '---. .---'          _/", bright),
+        ("         '---.___       |       ___.---'", acid),
+        ("                '---. [===] .---'", coral),
+        ("                     '-----'", bright),
+        ("", dim),
+        ("              DATA ENGINEERING", acid),
+        ("       ingest / transform / govern / serve", dim),
+        ("", dim),
+        ("              nodes: 06 / links: 08", blue),
+        ("              pipeline status: ONLINE", acid),
     ]
 
     rendered = []
     for index, (line, color) in enumerate(lines):
-        y = 58 + index * 12.1
+        y = 78 + index * 15.2
         rendered.append(
-            f'  <text x="22" y="{y:.1f}" fill="{color}" font-size="10.4" '
+            f'  <text x="18" y="{y:.1f}" fill="{color}" font-size="10.2" '
             f'font-family="Consolas, Courier New, monospace" xml:space="preserve">{esc(line)}</text>'
         )
 
