@@ -2,12 +2,6 @@
   <img src="./assets/generated/dataflow-header.svg" width="850" alt="Data Flow Header"/>
 </div>
 
-<br/>
-
-<div align="center">
-  <img src="./assets/generated/profile-intro.svg" width="850" alt="Data Engineering Profile"/>
-</div>
-
 <div align="center">
   <a href="https://youserz.github.io/portifolio/">
     <img src="https://img.shields.io/badge/-Portfólio-11120f?style=for-the-badge&logoColor=d8f85b" alt="Portfólio"/>

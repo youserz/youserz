@@ -8,6 +8,7 @@ profile:
   tagline: "Data Engineer · Cloud & Big Data"
   company: "Zetta / UFLA"
   location: "Lavras, MG - Brazil"
+  career_start: "2025-08-01"
   bio: |
     Computer Science student at UFLA focused on Data Engineering and Cloud Computing. I build incremental Big Data pipelines, data lakes and multidimensional data systems with AWS, Azure Databricks, Spark and Python.
   philosophy: "Engineering before dashboards: observable pipelines and data systems that hold up in the real world"

@@ -37,17 +37,7 @@ def test_render_dataflow_header():
     builder = SVGBuilder(config, DEMO_STATS, DEMO_LANGS)
     svg = builder.render_dataflow_header()
     assert svg.startswith("<svg")
-    assert "Demo User" in svg
-    assert "</svg>" in svg
-
-
-def test_render_profile_intro():
-    config = validate_config(DEMO_CONFIG)
-    builder = SVGBuilder(config, DEMO_STATS, DEMO_LANGS)
-    svg = builder.render_profile_intro()
-    assert svg.startswith("<svg")
-    assert "Dados que aguentam o mundo real." in svg
-    assert "DATA ENGINEERING" in svg
+    assert "DEMO USER" in svg
     assert "</svg>" in svg
 
 

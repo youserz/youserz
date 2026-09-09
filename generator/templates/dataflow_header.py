@@ -1,345 +1,152 @@
-﻿"""SVG template: DataFlow Header -- animated pipeline banner with 3D cube (850x300)."""
+"""SVG template: Neofetch-inspired profile header for a data engineer."""
 
-import math
-from generator.utils import deterministic_random, esc
+import datetime as dt
 
-WIDTH, HEIGHT = 850, 355
+from generator.utils import esc
+
+WIDTH, HEIGHT = 850, 360
 
 
-def _build_cube(theme):
-    """Build a 3D isometric Data Engineering cube with animations.
+def _months_since(date_text: str) -> str:
+    """Return a compact uptime-like duration from a YYYY-MM-DD start date."""
+    try:
+        start = dt.date.fromisoformat(date_text)
+    except (TypeError, ValueError):
+        return "active"
 
-    Returns an SVG group containing:
-    - Glow halo behind the cube (pulsing radial gradient)
-    - 3 visible faces (top, left, right) with data elements
-    - Continuous Y-axis rotation, vertical float, glow pulse
-    """
-    # Cube center in local coords
-    CX, CY = 100, 105
-    accent = theme.get("pipeline_teal", "#d8f85b")
-    bright = theme.get("text_bright", "#f2f0e8")
+    today = dt.date.today()
+    months = max(0, (today.year - start.year) * 12 + today.month - start.month)
+    return f"{months // 12:02d}y {months % 12:02d}m"
 
-    # -- Top face gradient: cyan to bright teal --
-    # -- Left face gradient: blue to purple --
-    # -- Right face gradient: teal to cyan --
 
-    return f'''  <!-- Data Engineering Cube -->
+def _cube(cx: float, top_y: float, size: float, color: str, label: str, delay: float, theme: dict) -> str:
+    """Build one floating isometric cube with a readable system label."""
+    depth = size * 0.22
+    height = size * 0.72
+    left = cx - size / 2
+    right = cx + size / 2
+    bottom = top_y + height
+    front_y = top_y + depth
+    dark = theme["depth"]
+    surface = theme["lake_surface"]
+    bright = theme["text_bright"]
 
-  <!-- Glow halo behind cube -->
-  <circle cx="{CX}" cy="{CY}" r="68" fill="url(#cube-glow)" opacity="0.12">
-    <animate attributeName="opacity" values="0.08;0.22;0.08" dur="3.5s" repeatCount="indefinite"/>
-    <animate attributeName="r" values="66;72;66" dur="3.5s" repeatCount="indefinite"/>
-  </circle>
-
-  <!-- Float + Rotate wrapper -->
-  <g>
-    <!-- Subtle vertical float -->
-    <animateTransform attributeName="transform" type="translate"
-      values="0,0; 0,-5; 0,0; 0,-5; 0,0" dur="4s" repeatCount="indefinite"/>
-
-    <!-- Continuous Y-axis rotation -->
-    <g>
-      <animateTransform attributeName="transform" type="rotate"
-        from="0 {CX} {CY}" to="360 {CX} {CY}" dur="10s" repeatCount="indefinite"/>
-
-      <!-- Left face (blue-purple gradient) -->
-      <polygon points="40,65 100,95 100,155 40,125"
-        fill="url(#cube-left)" stroke="{accent}" stroke-width="1.2" stroke-linejoin="round" opacity="0.92"/>
-
-      <!-- Left face: data layers (horizontal storage lines) -->
-      <line x1="47" y1="82" x2="93" y2="105" stroke="{accent}" stroke-width="0.6" opacity="0.5"/>
-      <line x1="44" y1="102" x2="90" y2="125" stroke="{accent}" stroke-width="0.6" opacity="0.5"/>
-      <line x1="42" y1="122" x2="88" y2="145" stroke="{accent}" stroke-width="0.6" opacity="0.5"/>
-
-      <!-- Left face: node dots on layers -->
-      <circle cx="55" cy="86" r="1.5" fill="{bright}" opacity="0.7">
-        <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="0.3s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="70" cy="112" r="1.5" fill="{bright}" opacity="0.7">
-        <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="1s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="60" cy="132" r="1.5" fill="{bright}" opacity="0.7">
-        <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="1.7s" repeatCount="indefinite"/>
-      </circle>
-
-      <!-- Right face (teal-cyan gradient) -->
-      <polygon points="100,95 160,65 160,125 100,155"
-        fill="url(#cube-right)" stroke="{accent}" stroke-width="1.2" stroke-linejoin="round" opacity="0.92"/>
-
-      <!-- Right face: pipeline nodes with connections -->
-      <line x1="115" y1="90" x2="140" y2="100" stroke="{accent}" stroke-width="0.6" opacity="0.5"/>
-      <line x1="140" y1="100" x2="130" y2="115" stroke="{accent}" stroke-width="0.6" opacity="0.5"/>
-      <line x1="130" y1="115" x2="150" y2="135" stroke="{accent}" stroke-width="0.6" opacity="0.5"/>
-
-      <circle cx="115" cy="90" r="2" fill="{bright}" opacity="0.8">
-        <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" begin="0s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="140" cy="100" r="2" fill="{bright}" opacity="0.8">
-        <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" begin="0.5s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="130" cy="115" r="2" fill="{bright}" opacity="0.8">
-        <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" begin="1s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="150" cy="135" r="2" fill="{bright}" opacity="0.8">
-        <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" begin="1.5s" repeatCount="indefinite"/>
-      </circle>
-
-      <!-- Top face (cyan gradient, lightest) -->
-      <polygon points="100,35 160,65 100,95 40,65"
-        fill="url(#cube-top)" stroke="{accent}" stroke-width="1.2" stroke-linejoin="round" opacity="0.95"/>
-
-      <!-- Top face: data grid (2x2 dotted pattern) -->
-      <line x1="70" y1="50" x2="130" y2="80" stroke="{bright}" stroke-width="0.5" stroke-dasharray="3,3" opacity="0.4"/>
-      <line x1="60" y1="65" x2="130" y2="50" stroke="{bright}" stroke-width="0.5" stroke-dasharray="3,3" opacity="0.4"/>
-
-      <!-- Top face: central data node -->
-      <circle cx="100" cy="65" r="3" fill="{bright}" opacity="0.6">
-        <animate attributeName="opacity" values="0.3;0.9;0.3" dur="2.5s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="100" cy="65" r="6" fill="none" stroke="{bright}" stroke-width="0.5" opacity="0.3">
-        <animate attributeName="opacity" values="0.1;0.4;0.1" dur="2.5s" repeatCount="indefinite"/>
-        <animate attributeName="r" values="5;8;5" dur="2.5s" repeatCount="indefinite"/>
-      </circle>
-
-    </g>
+    return f'''  <g opacity="0" filter="url(#cube-glow)">
+    <animate attributeName="opacity" from="0" to="1" dur="0.6s" begin="{delay}s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate" values="0,0; 0,-7; 0,0" dur="4.5s" begin="{delay}s" repeatCount="indefinite"/>
+    <polygon points="{left:.1f},{top_y:.1f} {cx:.1f},{top_y - depth:.1f} {right:.1f},{top_y:.1f} {cx:.1f},{front_y:.1f}" fill="{color}" fill-opacity="0.42" stroke="{color}" stroke-width="1"/>
+    <polygon points="{left:.1f},{top_y:.1f} {cx:.1f},{front_y:.1f} {cx:.1f},{bottom + depth:.1f} {left:.1f},{bottom:.1f}" fill="{surface}" stroke="{color}" stroke-opacity="0.8" stroke-width="1"/>
+    <polygon points="{cx:.1f},{front_y:.1f} {right:.1f},{top_y:.1f} {right:.1f},{bottom:.1f} {cx:.1f},{bottom + depth:.1f}" fill="{dark}" stroke="{color}" stroke-opacity="0.72" stroke-width="1"/>
+    <path d="M {left + 10:.1f} {top_y + 8:.1f} L {cx - 5:.1f} {front_y - 1:.1f} M {left + 7:.1f} {top_y + 20:.1f} L {cx - 5:.1f} {front_y + 11:.1f}" stroke="{bright}" stroke-opacity="0.3" stroke-width="0.7"/>
+    <circle cx="{cx + 12:.1f}" cy="{top_y + 9:.1f}" r="2.2" fill="{bright}">
+      <animate attributeName="opacity" values="0.25;1;0.25" dur="2.2s" begin="{delay}s" repeatCount="indefinite"/>
+    </circle>
+    <text x="{cx:.1f}" y="{bottom - 15:.1f}" fill="{bright}" font-size="9" font-weight="bold" font-family="monospace" text-anchor="middle">{esc(label)}</text>
   </g>'''
 
 
-def _build_particles(username, theme):
-    """Build small square particles flowing through horizontal pipes."""
-    particles = []
-    pipe_y_positions = [55, 100, 145]
-    pipe_colors = [
-        theme.get("pipeline_teal", "#d8f85b"),
-        theme.get("spark_orange", "#ff795c"),
-        theme.get("lake_green", "#91b7ff"),
-    ]
-
-    for pipe_idx, py in enumerate(pipe_y_positions):
-        color = pipe_colors[pipe_idx % len(pipe_colors)]
-        for i in range(5):
-            delay = i * 1.2 + pipe_idx * 0.4
-            duration = 6 + pipe_idx
-            particles.append(
-                f'    <rect x="0" y="{py - 2}" width="4" height="4" rx="1" fill="{color}" opacity="0.7">\n'
-                f'      <animateTransform attributeName="transform" type="translate" '
-                f'from="-10 0" to="{WIDTH + 10} 0" dur="{duration}s" begin="{delay}s" repeatCount="indefinite"/>\n'
-                f'      <animate attributeName="opacity" values="0;0.8;0.8;0" keyTimes="0;0.1;0.9;1" '
-                f'dur="{duration}s" begin="{delay}s" repeatCount="indefinite"/>\n'
-                f'    </rect>'
-            )
-    return "\n".join(particles)
-
-
-def _build_pipes(theme):
-    """Build horizontal pipeline tubes with gradients."""
-    pipe_y_positions = [55, 100, 145]
-    colors = [
-        theme.get("pipeline_teal", "#d8f85b"),
-        theme.get("spark_orange", "#ff795c"),
-        theme.get("lake_green", "#91b7ff"),
-    ]
-    pipes = []
-    for idx, py in enumerate(pipe_y_positions):
-        color = colors[idx % len(colors)]
-        pipes.append(
-            f'    <rect x="20" y="{py - 6}" width="{WIDTH - 40}" height="12" rx="6" '
-            f'fill="none" stroke="{color}" stroke-width="1" opacity="0.25"/>'
-        )
-        pipes.append(
-            f'    <line x1="20" y1="{py}" x2="{WIDTH - 20}" y2="{py}" '
-            f'stroke="{color}" stroke-width="0.5" stroke-dasharray="4,8" opacity="0.15"/>'
-        )
-    return "\n".join(pipes)
-
-
-def _build_grid_background(theme):
-    """Build faint technical grid lines."""
-    lines = []
-    for x in range(40, WIDTH, 60):
-        lines.append(
-            f'    <line x1="{x}" y1="10" x2="{x}" y2="{HEIGHT - 10}" '
-            f'stroke="{theme["grid"]}" stroke-width="0.5" stroke-dasharray="2,6" opacity="0.08"/>'
-        )
-    for y in range(40, HEIGHT, 40):
-        lines.append(
-            f'    <line x1="10" y1="{y}" x2="{WIDTH - 10}" y2="{y}" '
-            f'stroke="{theme["grid"]}" stroke-width="0.5" stroke-dasharray="2,6" opacity="0.08"/>'
-        )
-    return "\n".join(lines)
-
-
-def _build_starfield(username, theme):
-    """Build background data dust particles."""
-    stars = []
-    sx = deterministic_random(f"{username}_header_sx", 30, 10, WIDTH - 10)
-    sy = deterministic_random(f"{username}_header_sy", 30, 10, HEIGHT - 10)
-    sr = deterministic_random(f"{username}_header_sr", 30, 0.5, 1.5)
-    so = deterministic_random(f"{username}_header_so", 30, 0.05, 0.25)
-    sd = deterministic_random(f"{username}_header_sd", 30, 3.0, 7.0)
-
-    accent_colors = {
-        0: theme.get("pipeline_teal", "#d8f85b"),
-        5: theme.get("spark_orange", "#ff795c"),
-        10: theme.get("lake_green", "#91b7ff"),
-    }
-
-    for i in range(30):
-        fill = accent_colors.get(i % 15, theme.get("text_faint", "#64675d"))
-        stars.append(
-            f'    <circle cx="{sx[i]:.1f}" cy="{sy[i]:.1f}" r="{sr[i]:.2f}" '
-            f'fill="{fill}" opacity="{so[i]:.2f}">\n'
-            f'      <animate attributeName="opacity" values="{so[i]:.2f};{min(so[i]*3,0.7):.2f};{so[i]:.2f}" '
-            f'dur="{sd[i]:.1f}s" repeatCount="indefinite"/>\n'
-            f'    </circle>'
-        )
-    return "\n".join(stars)
-
-
-def _build_name_tagline(name, tagline, theme):
-    """Build centered name and tagline with terminal cursor effect."""
-    name_text = (
-        f'    <text x="{WIDTH / 2}" y="175" text-anchor="middle" '
-        f'fill="{theme["text_bright"]}" font-size="24" font-weight="bold" '
-        f'font-family="monospace">{esc(name)}'
-        f'<animate attributeName="opacity" values="1;1;0;1" keyTimes="0;0.7;0.75;1" '
-        f'dur="1.5s" repeatCount="indefinite"/></text>'
-    )
-
-    tagline_text = (
-        f'    <text x="{WIDTH / 2}" y="198" text-anchor="middle" '
-        f'fill="{theme["text_dim"]}" font-size="14" '
-        f'font-family="monospace">{esc(tagline)}</text>'
-    )
-
-    cursor = (
-        f'    <rect x="{WIDTH / 2 + len(tagline) * 4.5}" y="186" width="8" height="14" '
-        f'fill="{theme["pipeline_teal"]}" opacity="0">\n'
-        f'      <animate attributeName="opacity" values="0;1;0" dur="1s" repeatCount="indefinite"/>\n'
-        f'    </rect>'
-    )
-
-    return f"{name_text}\n{tagline_text}\n{cursor}"
-
-
-def _build_sub_tagline(sub_tagline, theme):
-    """Build a secondary tagline below the main one."""
-    return (
-        f'    <text x="{WIDTH / 2}" y="222" text-anchor="middle" '
-        f'fill="{theme["text_faint"]}" font-size="11" '
-        f'font-family="monospace" font-style="italic">{esc(sub_tagline)}</text>'
-    )
-
-
-def _build_bio(bio_text, theme):
-    """Build bio paragraph below the sub-tagline, wrapped to 2 lines if needed."""
-    if not bio_text:
-        return ""
-    max_line = 95
-    words = bio_text.split()
-    lines = []
-    current = ""
-    for word in words:
-        test = f"{current} {word}" if current else word
-        if len(test) > max_line:
-            lines.append(current)
-            current = word
-        else:
-            current = test
-    if current:
-        lines.append(current)
-
+def _stack(data_layers: list, theme: dict) -> str:
+    """Build the left-side floating data stack and its connectors."""
+    colors = [theme["pipeline_teal"], theme["spark_orange"], theme["lake_green"]]
+    labels = ["INGEST", "TRANSFORM", "LAKEHOUSE", "SERVE"]
+    placements = [(112, 78, 76), (205, 139, 84), (105, 220, 92), (245, 227, 66)]
     parts = []
-    for i, line in enumerate(lines[:3]):
+
+    for index, (cx, y, size) in enumerate(placements):
+        color = colors[index % len(colors)]
+        label = labels[index]
+        parts.append(_cube(cx, y, size, color, label, index * 0.18, theme))
+
+    # Dashed data routes stay behind the cubes.
+    routes = [(132, 131, 180, 137, colors[0]), (177, 204, 151, 219, colors[1]), (192, 266, 238, 256, colors[2])]
+    for x1, y1, x2, y2, color in routes:
+        parts.insert(0, f'  <path d="M {x1} {y1} C {x1 + 25} {y1 + 14}, {x2 - 25} {y2 - 14}, {x2} {y2}" fill="none" stroke="{color}" stroke-width="0.8" stroke-dasharray="3 6" opacity="0.5"/>')
+
+    for index, color in enumerate(colors):
+        parts.insert(1, f'''  <circle cx="0" cy="0" r="2.2" fill="{color}">
+    <animateMotion path="M 62 {127 + index * 65} C 98 {145 + index * 64}, 157 {153 + index * 54}, 229 {170 + index * 43}" dur="5.5s" begin="{-index * 1.8}s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.12;0.86;1" dur="5.5s" begin="{-index * 1.8}s" repeatCount="indefinite"/>
+  </circle>''')
+
+    return "\n".join(parts)
+
+
+def _terminal_lines(profile: dict, theme: dict) -> str:
+    """Build the Neofetch-style right-side system specification."""
+    name = profile.get("name", "Bernado Diniz")
+    tagline = profile.get("tagline", "Data Engineer")
+    company = profile.get("company", "Zetta / UFLA")
+    location = profile.get("location", "Lavras, MG - Brazil")
+    uptime = _months_since(profile.get("career_start", "2025-08-01"))
+    focus = " · ".join(profile.get("focus", ["DATA ENGINEERING", "CLOUD", "BIG DATA"]))
+    rows = [
+        ("OS", "DATA ENGINEERING / PORTFOLIO"),
+        ("Host", company.upper()),
+        ("Kernel", "CLOUD · LAKEHOUSE · BIG DATA"),
+        ("Uptime", f"{uptime} / building pipelines"),
+        ("Role", tagline.upper()),
+        ("Location", location.upper()),
+        ("Focus", focus),
+        ("Languages", "PYTHON · SQL · PYSPARK · C++"),
+        ("Systems", "AWS · AZURE · DATABRICKS · SPARK"),
+        ("Storage", "DELTA LAKE · ZARR · ICECHUNK"),
+        ("Status", "OPEN TO OPPORTUNITIES"),
+    ]
+    parts = []
+    x_label = 420
+    x_value = 510
+    for index, (label, value) in enumerate(rows):
+        y = 82 + index * 21
+        color = theme["pipeline_teal"] if label in {"Role", "Status"} else theme["spark_orange"]
         parts.append(
-            f'    <text x="{WIDTH / 2}" y="{245 + i * 14}" text-anchor="middle" '
-            f'fill="{theme["text_faint"]}" font-size="10" font-family="sans-serif" opacity="0.6">{esc(line)}</text>'
+            f'  <text x="{x_label}" y="{y}" fill="{color}" font-size="10" font-family="monospace">{esc(label + ":")}</text>'
+            f'<text x="{x_value}" y="{y}" fill="{theme["text_bright"]}" font-size="10" font-family="monospace">{esc(value)}</text>'
         )
     return "\n".join(parts)
 
 
 def render(config: dict, theme: dict, data_layers: list, projects: list) -> str:
-    """Render the dataflow header SVG with 3D Data Engineering cube."""
-    username = config.get("username", "user")
+    """Render a terminal-like profile header with animated 3D data cubes."""
     profile = config.get("profile", {})
-    name = profile.get("name", username)
-    tagline = profile.get("tagline", "")
-    philosophy = profile.get("philosophy", "")
-    bio = profile.get("bio", "")
-
-    cube = _build_cube(theme)
-    particles = _build_particles(username, theme)
-    pipes = _build_pipes(theme)
-    grid = _build_grid_background(theme)
-    stars = _build_starfield(username, theme)
-    name_tagline = _build_name_tagline(name, tagline, theme)
-    sub_tagline = _build_sub_tagline(philosophy, theme)
-    bio_text = _build_bio(bio, theme)
+    name = profile.get("name", "Bernado Diniz")
+    tagline = profile.get("tagline", "Data Engineer")
+    stack = _stack(data_layers, theme)
+    terminal = _terminal_lines(profile, theme)
 
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{HEIGHT}" viewBox="0 0 {WIDTH} {HEIGHT}">
   <defs>
-    <!-- Pipe glow gradient -->
-    <linearGradient id="pipe-glow" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="{theme['pipeline_teal']}" stop-opacity="0"/>
-      <stop offset="50%" stop-color="{theme['pipeline_teal']}" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="{theme['pipeline_teal']}" stop-opacity="0"/>
-    </linearGradient>
-
-    <!-- Cube glow radial gradient -->
-    <radialGradient id="cube-glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="{theme['pipeline_teal']}" stop-opacity="0.5"/>
-      <stop offset="40%" stop-color="{theme['spark_orange']}" stop-opacity="0.2"/>
-      <stop offset="100%" stop-color="{theme['pipeline_teal']}" stop-opacity="0"/>
-    </radialGradient>
-
-    <!-- Cube top face gradient (cyan, lightest) -->
-    <linearGradient id="cube-top" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="{theme['pipeline_teal']}" stop-opacity="0.30"/>
-      <stop offset="100%" stop-color="{theme['text_bright']}" stop-opacity="0.12"/>
-    </linearGradient>
-
-    <!-- Cube left face gradient (blue to purple) -->
-    <linearGradient id="cube-left" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="{theme['depth']}" stop-opacity="0.72"/>
-      <stop offset="50%" stop-color="{theme['lake_surface']}" stop-opacity="0.64"/>
-      <stop offset="100%" stop-color="{theme['spark_orange']}" stop-opacity="0.30"/>
-    </linearGradient>
-
-    <!-- Cube right face gradient (teal to cyan) -->
-    <linearGradient id="cube-right" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="{theme['lake_green']}" stop-opacity="0.38"/>
-      <stop offset="50%" stop-color="{theme['pipeline_teal']}" stop-opacity="0.32"/>
-      <stop offset="100%" stop-color="{theme['text_bright']}" stop-opacity="0.16"/>
-    </linearGradient>
+    <filter id="cube-glow" x="-35%" y="-35%" width="170%" height="170%">
+      <feGaussianBlur stdDeviation="2.4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="terminal-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="{theme['grid']}" stroke-width="0.5" opacity="0.15"/>
+    </pattern>
   </defs>
 
-  <!-- Background -->
-  <rect x="0" y="0" width="{WIDTH}" height="{HEIGHT}" rx="12" ry="12" fill="{theme['depth']}"/>
+  <rect x="0.5" y="0.5" width="{WIDTH - 1}" height="{HEIGHT - 1}" rx="12" fill="{theme['depth']}" stroke="{theme['grid']}" stroke-width="1"/>
+  <rect x="1" y="1" width="{WIDTH - 2}" height="{HEIGHT - 2}" rx="11" fill="url(#terminal-grid)"/>
 
-  <!-- Grid -->
-{grid}
+  <!-- Terminal bar -->
+  <rect x="1" y="1" width="{WIDTH - 2}" height="35" rx="11" fill="{theme['lake_surface']}"/>
+  <path d="M 1 36 H {WIDTH - 1}" stroke="{theme['grid']}"/>
+  <circle cx="20" cy="18" r="4" fill="{theme['spark_orange']}"/>
+  <circle cx="34" cy="18" r="4" fill="#e5c45c"/>
+  <circle cx="48" cy="18" r="4" fill="{theme['pipeline_teal']}"/>
+  <text x="70" y="22" fill="{theme['text_dim']}" font-size="10" font-family="monospace">bernado@data-stack:~</text>
+  <text x="815" y="22" fill="{theme['text_faint']}" font-size="9" font-family="monospace" text-anchor="end">neofetch --profile</text>
 
-  <!-- Pipes -->
-{pipes}
+  <!-- Left visual: floating data cubes -->
+  <text x="28" y="58" fill="{theme['text_faint']}" font-size="9" font-family="monospace" letter-spacing="1.5">DATA SYSTEM / 3D PIPELINE</text>
+{stack}
+  <text x="28" y="327" fill="{theme['text_faint']}" font-size="9" font-family="monospace">[●] pipeline online / no manual retries</text>
 
-  <!-- Background particles -->
-{stars}
+  <!-- Divider -->
+  <line x1="380" y1="52" x2="380" y2="329" stroke="{theme['grid']}" stroke-dasharray="2 7"/>
 
-  <!-- Flowing data particles -->
-{particles}
-
-  <!-- Data Engineering Cube (center, above name) -->
-  <g transform="translate(325, 12) scale(1.05)">
-{cube}
-  </g>
-
-  <!-- Name & tagline -->
-{name_tagline}
-
-  <!-- Sub-tagline -->
-{sub_tagline}
-
-  <!-- Bio -->
-{bio_text}
+  <!-- Right visual: system specification -->
+  <text x="408" y="58" fill="{theme['text_faint']}" font-size="9" font-family="monospace" letter-spacing="1.5">{esc(name.upper())} / SYSTEM INFO</text>
+{terminal}
+  <line x1="420" y1="318" x2="815" y2="318" stroke="{theme['grid']}" stroke-dasharray="3 6"/>
+  <text x="420" y="333" fill="{theme['text_faint']}" font-size="8" font-family="monospace">{esc(tagline.upper())} · DATA SYSTEMS THAT HOLD UP</text>
 </svg>'''
-
