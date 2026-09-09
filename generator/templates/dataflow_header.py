@@ -20,7 +20,7 @@ def _months_since(date_text: str) -> str:
 
 
 def _ascii_art(theme: dict) -> str:
-    """Render a data-engineering gear and network from ASCII characters."""
+    """Render an extruded 3D data gear from ASCII characters."""
     acid = theme["pipeline_teal"]
     coral = theme["spark_orange"]
     blue = theme["lake_green"]
@@ -28,28 +28,28 @@ def _ascii_art(theme: dict) -> str:
     bright = theme["text_bright"]
 
     lines = [
-        ("                  .----[ ]----.", dim),
-        ("               .-'             '-.", bright),
-        (r"         _____/        (O)        \_____", acid),
-        (r"       _/               |               \_", bright),
-        ("      /     ____         |         ____    \\" , dim),
-        (" [===]    .'    '.       |       .'    '.  [===]", coral),
-        (r"    |    /      (O)------+------(O)      \    |", acid),
-        (r"    |   |          \     |     /          |   |", bright),
-        (r"    |   |           \   (O)   /           |   |", blue),
-        (r"[===]   |            \  /|\  /            |  [===]", coral),
-        (r"    |   |             \/ | \/             |   |", bright),
-        ("    |   |          (O)---+---(O)          |   |", acid),
-        (r"    |    \             / \             /    |", bright),
-        (r" [===]    '.___        /   \        __.'   [===]", blue),
-        (r"      \        '-.    /     \    .-'       /", dim),
-        (r"       \_          '---. .---'          _/", bright),
-        ("         '---.___       |       ___.---'", acid),
-        ("                '---. [===] .---'", coral),
-        ("                     '-----'", bright),
+        ("                    ___[###]___", coral),
+        ("                _.-'           '-._", bright),
+        ("            _.-'    .-------.      '-._", dim),
+        (r"        ___/___    /    (O)  \     ___\___", acid),
+        (r"       /  /   \___/      |      \___/   \  \_", bright),
+        (r"  ____/__/       |   (O)--+--(O)  |       \__\____", coral),
+        (r" [###]          |     \  |  /     |          [###]", acid),
+        (r" /   |          |      \(O)/      |          |   \_", bright),
+        (r"[    |          |       /|\       |          |    ]", blue),
+        ("|    |          |    (O)-+-(O)    |          |    |", acid),
+        (r"[    |           \       |       /           |    ]", bright),
+        (r" \   |     ___    '------|------'    ___    |   /", dim),
+        (r"  [###]___/   \___       |      ___/   \___[###]", coral),
+        (r"      \  \       '-._____|___.-'       /  /", bright),
+        (r"       \__\______               _______/__/", blue),
+        (r"            \    '-------------'       /", dim),
+        (r"             \\\\\\\\\\\\\\\\\_", blue),
+        (r"              \_____________________\_", bright),
+        ("                 '---[#####]---'", coral),
         ("", dim),
-        ("              DATA ENGINEERING", acid),
-        ("       ingest / transform / govern / serve", dim),
+        ("                 3D DATA GEAR", acid),
+        ("        ingest / process / govern / serve", dim),
         ("", dim),
         ("              nodes: 06 / links: 08", blue),
         ("              pipeline status: ONLINE", acid),
@@ -57,9 +57,9 @@ def _ascii_art(theme: dict) -> str:
 
     rendered = []
     for index, (line, color) in enumerate(lines):
-        y = 78 + index * 15.2
+        y = 85 + index * 16.0
         rendered.append(
-            f'  <text x="18" y="{y:.1f}" fill="{color}" font-size="10.2" '
+            f'  <text x="10" y="{y:.1f}" fill="{color}" font-size="10.4" '
             f'font-family="Consolas, Courier New, monospace" xml:space="preserve">{esc(line)}</text>'
         )
 
