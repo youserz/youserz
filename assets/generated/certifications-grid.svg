@@ -13,7 +13,7 @@
     <circle cx="150.0" cy="73" r="10" fill="#d8f85b" opacity="0.12">      <animate attributeName="opacity" values="0.12;0.25;0.12" dur="3s" begin="0.0s" repeatCount="indefinite"/>    </circle>
     <path d="M 146.0 73 L 149.0 76 L 154.0 70" fill="none" stroke="#d8f85b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
     <text x="150.0" y="100" text-anchor="middle" fill="#f2f0e8" font-size="10" font-weight="bold" font-family="monospace">Bradesco - GenAI &amp; Dados</text>
-    <text x="150.0" y="115" text-anchor="middle" fill="#64675d" font-size="9" font-family="monospace">FundaÃ§Ã£o Bradesco  |  2026</text>
+    <text x="150.0" y="115" text-anchor="middle" fill="#64675d" font-size="9" font-family="monospace">Fundação Bradesco  |  2026</text>
     <rect x="25.0" y="55" width="250" height="1.5" fill="#d8f85b" opacity="0.1"><animateTransform attributeName="transform" type="translate" from="0 0" to="0 75" dur="3s" begin="0.3s" repeatCount="indefinite"/></rect>
   </g>
   <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.25s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 12" to="0 0" dur="0.5s" begin="0.25s" fill="freeze"/>

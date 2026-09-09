@@ -97,7 +97,7 @@
   <text x="420" y="103" fill="#ff795c" font-size="10" font-family="monospace">Host:</text><text x="510" y="103" fill="#f2f0e8" font-size="10" font-family="monospace">ZETTA / UFLA</text>
   <text x="420" y="124" fill="#ff795c" font-size="10" font-family="monospace">Kernel:</text><text x="510" y="124" fill="#f2f0e8" font-size="10" font-family="monospace">CLOUD · LAKEHOUSE · BIG DATA</text>
   <text x="420" y="145" fill="#ff795c" font-size="10" font-family="monospace">Uptime:</text><text x="510" y="145" fill="#f2f0e8" font-size="10" font-family="monospace">01y 01m / building pipelines</text>
-  <text x="420" y="166" fill="#d8f85b" font-size="10" font-family="monospace">Role:</text><text x="510" y="166" fill="#f2f0e8" font-size="10" font-family="monospace">DATA ENGINEER Â· CLOUD &amp; BIG DATA</text>
+  <text x="420" y="166" fill="#d8f85b" font-size="10" font-family="monospace">Role:</text><text x="510" y="166" fill="#f2f0e8" font-size="10" font-family="monospace">DATA ENGINEER · CLOUD &amp; BIG DATA</text>
   <text x="420" y="187" fill="#ff795c" font-size="10" font-family="monospace">Location:</text><text x="510" y="187" fill="#f2f0e8" font-size="10" font-family="monospace">LAVRAS, MG - BRAZIL</text>
   <text x="420" y="208" fill="#ff795c" font-size="10" font-family="monospace">Focus:</text><text x="510" y="208" fill="#f2f0e8" font-size="10" font-family="monospace">DATA ENGINEERING · CLOUD · BIG DATA</text>
   <text x="420" y="229" fill="#ff795c" font-size="10" font-family="monospace">Languages:</text><text x="510" y="229" fill="#f2f0e8" font-size="10" font-family="monospace">PYTHON · SQL · PYSPARK · C++</text>
@@ -105,5 +105,5 @@
   <text x="420" y="271" fill="#ff795c" font-size="10" font-family="monospace">Storage:</text><text x="510" y="271" fill="#f2f0e8" font-size="10" font-family="monospace">DELTA LAKE · ZARR · ICECHUNK</text>
   <text x="420" y="292" fill="#d8f85b" font-size="10" font-family="monospace">Status:</text><text x="510" y="292" fill="#f2f0e8" font-size="10" font-family="monospace">OPEN TO OPPORTUNITIES</text>
   <line x1="420" y1="318" x2="815" y2="318" stroke="#34372e" stroke-dasharray="3 6"/>
-  <text x="420" y="333" fill="#64675d" font-size="8" font-family="monospace">DATA ENGINEER Â· CLOUD &amp; BIG DATA · DATA SYSTEMS THAT HOLD UP</text>
+  <text x="420" y="333" fill="#64675d" font-size="8" font-family="monospace">DATA ENGINEER · CLOUD &amp; BIG DATA · DATA SYSTEMS THAT HOLD UP</text>
 </svg>
