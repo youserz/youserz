@@ -1,56 +1,61 @@
-<div align="center">
-  <img src="./assets/generated/dataflow-header.svg" width="850" alt="Data Flow Header"/>
-</div>
+```text
+bernado@data-stack:~$ neofetch --profile
 
-<div align="center">
-  <a href="https://youserz.github.io/portifolio/">
-    <img src="https://img.shields.io/badge/-Portfólio-11120f?style=for-the-badge&logoColor=d8f85b" alt="Portfólio"/>
-  </a>
-  <a href="https://youserz.github.io/portifolio/Curriculo2026.pdf">
-    <img src="https://img.shields.io/badge/-Currículo-11120f?style=for-the-badge&logoColor=ff795c" alt="Currículo"/>
-  </a>
-</div>
+        .-----------------.             OS:          DATA ENGINEERING / LAKEHOUSE
+      .'       INGEST      /|             Host:        ZETTA / UFLA
+     +--------------------+ |             Kernel:      CLOUD + BIG DATA
+     |  *  *  *  *  *      | |             Uptime:      01y 01m / since 2025-08
+     |        \|/         | /             Role:        DATA ENGINEER JR
+     |         v          |/              Location:    LAVRAS, MG - BRAZIL
+     +--------------------+               Status:      OPEN TO OPPORTUNITIES
 
-<br/>
+         .--------------------.          Languages.Programming: Python, SQL, PySpark, C++
+       .'      TRANSFORM       /|         Languages.Data:        Spark, Xarray, Pandas
+      +-----------------------+ |         Cloud:                 AWS, Azure, Databricks
+      |  /  /  /  /  /  /      | |         Storage:               Delta Lake, Zarr, Icechunk
+      |       normalize        | /         Governance:            Unity Catalog, IAM
+      +-----------------------+'
 
-<div align="center">
-  <img src="./assets/generated/stats-card.svg" width="850" alt="Data Telemetry"/>
-</div>
+       .--------------------.            Certifications: AWS Cloud Practitioner
+      /      LAKEHOUSE       /|           Credentials:    AWS Partner x3 / GenAI & Dados
+     +----------------------+ |           Security:       Google Cybersecurity
+     |   ACID   DATA   OPS  | |           Projects:       ERA5 / AWS Data & Analytics
+     |   RAW -> TRUSTED     | /           Tooling:        Docker / Git / Jupyter
+     +----------------------+
 
-<br/>
+          .--------------.              $ status --detail
+         /     SERVE     /|              pipelines:       ONLINE
+        +--------------+ |               retries:         0
+        |   ANALYTICS  | |               manual work:    NONE
+        |      +       |/                architecture:    INCREMENTAL ETL
+        +--------------+                 philosophy:      ENGINEERING BEFORE DASHBOARDS
 
-<div align="center">
-  <img src="./assets/generated/tech-stack.svg" width="850" alt="Data Stack"/>
-</div>
+--------------------------------------------------------------------------------
 
-<br/>
+bernado@data-stack:~$ cat projects.txt
 
-<div align="center">
-  <img src="./assets/generated/projects-pipeline.svg" width="850" alt="Featured Pipelines"/>
-</div>
+[01] era5-land-zarr-pipeline
+     GRIB -> Zarr | Python | Xarray | cloud-ready multidimensional data
+     https://github.com/youserz/era5-land-zarr-pipeline
 
-<br/>
+[02] PB_Compass-DandA-AWS
+     Raw -> Trusted -> Refined | S3 | Glue | Athena | Data Lake
+     https://github.com/youserz/PB_Compass-DandA-AWS
 
-<div align="center">
-  <img src="./assets/generated/experience-timeline.svg" width="850" alt="Professional Experience"/>
-</div>
+[03] voice-chatgpt
+     Speech-to-Text | Responses API | Text-to-Speech | Python
+     https://github.com/youserz/voice-chatgpt
 
-<br/>
+--------------------------------------------------------------------------------
 
-<div align="center">
-  <img src="./assets/generated/certifications-grid.svg" width="850" alt="Certifications"/>
-</div>
+bernado@data-stack:~$ cat contact.txt
 
-<br/>
+email:     bernado.felix@estudante.ufla.br
+linkedin:  https://www.linkedin.com/in/bernadodiniz/
+github:    https://github.com/youserz
+portfolio: https://youserz.github.io/portifolio/
+resume:    https://youserz.github.io/portifolio/Curriculo2026.pdf
 
-<div align="center">
-  <a href="mailto:bernado.felix@estudante.ufla.br">
-    <img src="https://img.shields.io/badge/-Email-11120f?style=for-the-badge&logo=gmail&logoColor=d8f85b" alt="Email"/>
-  </a>
-  <a href="https://www.linkedin.com/in/bernadodiniz/">
-    <img src="https://img.shields.io/badge/-LinkedIn-11120f?style=for-the-badge&logo=linkedin&logoColor=ff795c" alt="LinkedIn"/>
-  </a>
-  <a href="https://github.com/youserz">
-    <img src="https://img.shields.io/badge/-GitHub-11120f?style=for-the-badge&logo=github&logoColor=91b7ff" alt="GitHub"/>
-  </a>
-</div>
+bernado@data-stack:~$ echo "dados que aguentam o mundo real."
+dados que aguentam o mundo real.
+```
