@@ -31,6 +31,7 @@ class SVGBuilder:
             theme=self.theme,
             data_layers=self.data_layers,
             projects=self.projects,
+            stats=self.stats,
         )
 
     def render_stats_card(self) -> str:

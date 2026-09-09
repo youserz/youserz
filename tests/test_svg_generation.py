@@ -37,7 +37,7 @@ def test_render_dataflow_header():
     builder = SVGBuilder(config, DEMO_STATS, DEMO_LANGS)
     svg = builder.render_dataflow_header()
     assert svg.startswith("<svg")
-    assert "DEMO USER" in svg
+    assert "Demo User" in svg
     assert "</svg>" in svg
 
 
